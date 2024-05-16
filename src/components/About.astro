@@ -1,0 +1,76 @@
+---
+import { Image } from 'astro:assets';
+import myImage from '../../assets/image.jpeg';
+---
+
+<div class='features'>
+  <Image
+    class='features__img lazy-img'
+    src={myImage}
+    alt='A description of my image.'
+  />
+  <div class='features__feature'>
+    <div class='features__icon'>
+      <svg data-icon='icon'>
+        <use xlink:href='/icons.svg#icon-credit-card'></use>
+        
+      </svg>
+                        <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+
+    </div>
+    <h5 class='features__header'>ECO-FRIENDLY</h5>
+    
+    <p>
+      Not every junk item is meant to be thrown away, and we understand that.
+      Our team sorts your junk into three categories Recycle, Donate, Dispose Of
+      and removes it accordingly.
+    </p>
+  </div>
+</div>
+
+<style>
+  .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    row-gap: 12rem;
+    /* margin: 4rem; */
+    background-color: rgba(252, 250, 243, 0.43);
+  }
+
+  .features__img {
+    width: 100%;
+    height: auto; /* Ensures the image maintains its aspect ratio */
+  }
+
+  .features__feature {
+    align-self: center;
+    justify-self: center;
+    width: 85%;
+    /* // font-size: 1.5rem; */
+  }
+
+  .features__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ab7272
+    /* background-color: var(--clr-primary-200); */
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+  }
+
+  .features__icon svg {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: #fff;
+    z-index: 100;
+  }
+
+  .features__header {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+</style>

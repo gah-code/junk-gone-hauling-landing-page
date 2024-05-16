@@ -1,0 +1,138 @@
+<div class='form-wrapper'>
+  <div class='form-box'>
+    <div class='cta'>
+      <div class='cta-text-box'>
+        <h2 class='heading-secondary'>START REMOVING TODAY!</h2>
+        <!-- <p class='form-description'>
+          Clearing Your Space, Clearing Your Mind in San Jose, CA
+        </p> -->
+
+        <div class='cta-form' name='sign-up'>
+          <div>
+            <!-- <label for='full-name'>Full Name</label> -->
+            <input
+              id='full-name'
+              type='text'
+              placeholder='John Smith'
+              name='full-name'
+              required
+            />
+          </div>
+
+          <div>
+            <!-- <label for='full-name'>Full Name</label> -->
+            <input
+              id='full-name'
+              type='text'
+              placeholder='Phone Number'
+              name='full-name'
+              required
+            />
+          </div>
+
+          <div>
+            <!-- <label for='email'>Email address</label> -->
+            <input
+              id='email'
+              type='email'
+              placeholder='me@example.com'
+              name='email'
+              required
+            />
+          </div>
+
+          <div>
+            <!-- <label for='select-where'>Junk removal</label> -->
+            <select id='select-where' name='select-where' required>
+              <option value=''>Please choose one option:</option>
+              <option value='friends'>Friends and family</option>
+              <option value='youtube'>YouTube video</option>
+              <option value='podcast'>Podcast</option>
+              <option value='ad'>Facebook ad</option>
+              <option value='others'>Others</option>
+            </select>
+          </div>
+
+          <button class='btn btn--form'>REMOVAL</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .form-wrapper {
+    /* background-image: url('https://assets.codepen.io/308367/mountain-with-stars.jpg');
+    background-position: bottom;
+    background-size: cover;
+    min-height: 70vh;
+    position: relative; */
+  }
+  .cta {
+    display: grid;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.139);
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 475px;
+    border: solid 4px var(--clr-secondary-200);
+    background-color: var(--clr-primary-200);
+    /* border: solid 3px #fff; */
+    /* background-color: var(--clr-primary-200); */
+  }
+
+  .cta-text-box {
+    padding: 3rem 2.5rem 3rem 2.5rem;
+    color: var(--clr-primary-400);
+  }
+
+  .cta .heading-secondary {
+    font-size: 24px;
+    margin-bottom: 2rem;
+    color: #fffffe;
+  }
+
+  .cta .form-description {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    /* font-size: 1.8rem; */
+    margin-bottom: 2rem;
+    line-height: 1.15;
+    /* color: var(--clr-text); */
+    color: #fffffe;
+  }
+
+  .cta-text {
+    /* font-size: 1.4rem; */
+    /* line-height: 1.8; */
+    /* margin-bottom: 2.5rem; */
+  }
+  .cta-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 3rem;
+    row-gap: 0.8rem;
+  }
+  .cta-form label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    /* margin-bottom: 1.2rem; */
+  }
+  .cta-form input,
+  .cta-form select {
+    width: 100%;
+    padding: 1rem 2rem;
+    /* font-size: 1.8rem; */
+    font-family: inherit;
+    color: inherit;
+    border: none;
+    background-color: #fcfcfde6;
+    border-radius: 9px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.142);
+    /* margin-bottom: 2rem; */
+  }
+  .btn {
+    margin: 1rem 1rem 0 0;
+    padding: 1rem;
+  }
+</style>

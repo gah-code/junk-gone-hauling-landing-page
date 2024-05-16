@@ -33,9 +33,9 @@ body {
 body {
   background: hsl(0 15% 90%);
   // needs to be defined
-  width: min(100% - 4rem, 70ch);
+  // width: min(100% - 4rem, 70ch);
   margin-inline: auto;
-  padding: 3rem 2rem;
+  padding: 3rem 1rem;
 }
 
 /*
