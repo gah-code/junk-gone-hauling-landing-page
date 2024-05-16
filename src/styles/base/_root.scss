@@ -1,0 +1,13 @@
+@use 'color' as *;
+
+// target the root element of the HTML doc
+
+:root {
+  // Sass control directive interates over each key-value pair in the $colors map
+
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --#{$color}-#{$shade}: #{$value};
+    }
+  }
+}

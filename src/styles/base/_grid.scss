@@ -1,0 +1,28 @@
+.grid {
+  display: grid;
+  column-gap: 1.4rem;
+  row-gap: 4.6rem;
+  margin-bottom: 9.6rem;
+
+  &:not(:last-child) {
+    margin-bottom: 9.6rem;
+  }
+
+  // Define column variations using a mixin
+  @mixin grid-columns($count) {
+    grid-template-columns: repeat($count, 1fr);
+  }
+
+  &--2-cols {
+    @include grid-columns(2);
+  }
+  &--3-cols {
+    @include grid-columns(3);
+  }
+  &--4-cols {
+    @include grid-columns(4);
+  }
+  &--6-cols {
+    @include grid-columns(3);
+  }
+}
