@@ -1,9 +1,12 @@
-@use 'color' as *;
+@use "color" as *;
 
 // target the root element of the HTML doc
 
 :root {
   // Sass control directive interates over each key-value pair in the $colors map
+  --gradient-primary: linear-gradient(to top left,
+      hsl(57, 100%, 50%),
+      hsl(57, 95%, 53%));
 
   @each $color, $shades in $colors {
     @each $shade, $value in $shades {

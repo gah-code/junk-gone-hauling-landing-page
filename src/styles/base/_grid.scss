@@ -16,13 +16,53 @@
   &--2-cols {
     @include grid-columns(2);
   }
+
   &--3-cols {
     @include grid-columns(3);
   }
+
   &--4-cols {
     @include grid-columns(4);
   }
+
   &--6-cols {
     @include grid-columns(3);
   }
+
+  @media (max-width: 75em) {
+    column-gap: 2rem;
+    row-gap: 2.8rem;
+
+    &--4-cols {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &--6-cols {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 44em) {
+
+    &--3-cols,
+    &--4-cols,
+    &--6-cols {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 34em) {
+    .grid {
+      row-gap: 3rem;
+      margin-bottom: 4.6rem;
+
+      &--2-cols,
+      &--3-cols,
+      &--4-cols {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+
 }

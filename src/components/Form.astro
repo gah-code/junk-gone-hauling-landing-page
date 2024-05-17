@@ -2,7 +2,7 @@
   <div class='form-box'>
     <div class='cta'>
       <div class='cta-text-box'>
-        <h2 class='heading-secondary'>START REMOVING TODAY!</h2>
+        <h4 class='heading-secondary'>START REMOVING TODAY!</h4>
         <!-- <p class='form-description'>
           Clearing Your Space, Clearing Your Mind in San Jose, CA
         </p> -->
@@ -73,7 +73,7 @@
     box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.139);
     border-radius: 5px;
     overflow: hidden;
-    max-width: 475px;
+    max-width: 500px;
     border: solid 4px var(--clr-secondary-200);
     background-color: var(--clr-primary-200);
     /* border: solid 3px #fff; */
@@ -81,13 +81,13 @@
   }
 
   .cta-text-box {
-    padding: 3rem 2.5rem 3rem 2.5rem;
+    padding: 4rem 3rem 4.5rem 3rem;
     color: var(--clr-primary-400);
   }
 
   .cta .heading-secondary {
     font-size: 24px;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     color: #fffffe;
   }
 
@@ -102,15 +102,15 @@
   }
 
   .cta-text {
-    /* font-size: 1.4rem; */
-    /* line-height: 1.8; */
+    font-size: 1.4rem;
+    line-height: 1.8;
     /* margin-bottom: 2.5rem; */
   }
   .cta-form {
     display: grid;
     grid-template-columns: 1fr;
     column-gap: 3rem;
-    row-gap: 0.8rem;
+    row-gap: 1.5rem;
   }
   .cta-form label {
     display: block;
@@ -122,17 +122,69 @@
   .cta-form select {
     width: 100%;
     padding: 1rem 2rem;
-    /* font-size: 1.8rem; */
+    font-size: 1.8rem;
     font-family: inherit;
     color: inherit;
     border: none;
     background-color: #fcfcfde6;
     border-radius: 9px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.142);
-    /* margin-bottom: 2rem; */
+    margin-bottom: 1.5rem;
   }
   .btn {
     margin: 1rem 1rem 0 0;
     padding: 1rem;
+  }
+
+  @media (max-width: 59em) {
+    .cta {
+      /* background-color: #7cb07f; */
+    }
+
+    .cta-form {
+      column-gap: 2rem;
+      row-gap: 1.2rem;
+    }
+
+    .cta-text-box {
+      /* padding: 4rem 2rem 4rem 2rem; */
+      padding: 4rem 4rem 5rem 4rem;
+      color: #45260a;
+      width: 385px;
+    }
+
+    .cta .heading-secondary {
+      margin-bottom: 2rem;
+    }
+
+    .cta .form-description {
+      font-size: 1.4rem;
+      margin-bottom: 4rem;
+    }
+
+    .cta-text {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta-form {
+      row-gap: 1.5rem;
+    }
+  }
+
+  @media (max-width: 44em) {
+    .form-wrapper {
+      padding: 1rem 1.5rem;
+    }
+    .cta {
+      /* background-color: #705f51; */
+    }
+
+    .cta-text-box {
+      padding: 6rem 1rem 6rem 1rem;
+      /* min-width: 450px; */
+
+      /* color: #45260a; */
+    }
   }
 </style>

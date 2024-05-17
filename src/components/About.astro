@@ -3,32 +3,56 @@ import { Image } from 'astro:assets';
 import myImage from '../../assets/image.jpeg';
 ---
 
-<div class='features'>
-  <Image
-    class='features__img lazy-img'
-    src={myImage}
-    alt='A description of my image.'
-  />
-  <div class='features__feature'>
-    <div class='features__icon'>
-      <svg data-icon='icon'>
-        <use xlink:href='/icons.svg#icon-credit-card'></use>
-        
-      </svg>
-                        <ion-icon class="meal-icon" name="star-outline"></ion-icon>
-
+<section>
+  <div class='features'>
+    <Image
+      class='features__img lazy-img'
+      src={myImage}
+      alt='A description of my image.'
+    />
+    <div class='features__feature'>
+      <div class='features__icon'>
+        <svg data-icon='icon'>
+          <use xlink:href='/icons.svg#icon-credit-card'></use>
+        </svg>
+      </div>
+      <h3 class='features__header'>ECO-FRIENDLY</h3>
+      <p>
+        Not every junk item is meant to be thrown away, and we understand that.
+        Our team sorts your junk into three categories: Recycle, Donate, Dispose
+        Of, and removes it accordingly.
+      </p>
     </div>
-    <h5 class='features__header'>ECO-FRIENDLY</h5>
-    
-    <p>
-      Not every junk item is meant to be thrown away, and we understand that.
-      Our team sorts your junk into three categories Recycle, Donate, Dispose Of
-      and removes it accordingly.
-    </p>
+    <div class='features__feature'>
+      <div class='features__icon'>
+        <svg>
+          <use xlink:href='/icons.svg#icon-credit-card'></use>
+        </svg>
+      </div>
+      <h5 class='features__header'>
+        Our team is professional, friendly, and dedicated
+      </h5>
+      <p>
+        Quasi, fugit in cumque cupiditate reprehenderit debitis animi enim
+        eveniet consequatur odit quam quos possimus assumenda dicta fuga
+        inventore ab.
+      </p>
+      <button>btn</button>
+    </div>
+    <Image class='features__img lazy-img' src={myImage} alt='Credit card' />
   </div>
-</div>
+</section>
 
-<style>
+<style lang='scss' is:global>
+  section {
+    padding: 12rem 3rem;
+    border-top: 1px solid #ddd;
+    background-color: #ab7272;
+    /* // background-color: var(--clr-primary-800); */
+    transition:
+      transform 1s,
+      opacity 1s;
+  }
   .features {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -54,7 +78,7 @@ import myImage from '../../assets/image.jpeg';
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ab7272
+    background-color: #ab7272;
     /* background-color: var(--clr-primary-200); */
     height: 5rem;
     width: 5rem;
@@ -70,7 +94,30 @@ import myImage from '../../assets/image.jpeg';
   }
 
   .features__header {
-    font-size: 2.8rem;
+    // font-size: 2rem;
     margin-bottom: 1rem;
+  }
+  @media (max-width: 44em) {
+    .features {
+      grid-template-columns: 1fr;
+      row-gap: 6.5rem;
+      margin: 5rem 0;
+      padding: 0 1.5rem;
+
+      // margin: 5rem 3rem;
+      // border: solid 3px yellowgreen;
+    }
+    .features__feature:nth-child(2) {
+      grid-row: 1;
+      // background-color: rgb(216, 174, 255);
+    }
+    .features__feature:nth-child(3) {
+      grid-row: 3;
+      background-color: blueviolet;
+    }
+    .features__feature:nth-child(6) {
+      grid-row: 5;
+      background-color: blueviolet;
+    }
   }
 </style>
