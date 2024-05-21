@@ -28,51 +28,65 @@ import Form from './Form.astro';
   </div>
 </div>
 
-<style lang='scss' is:global>
-  // @use '../styles/scss/base/font' as *;
-
+<style lang='scss'>
   .section-hero {
     min-height: 70vh;
     position: relative;
-    background-color: transparent;
     background-color: #343f61;
-
     outline: solid 3px #fdf2e9;
     padding: max(4rem, 15vh) 0;
     isolation: isolate;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 17, 255, 0.978),
+          rgba(56, 100, 232, 0.872),
+          rgba(103, 126, 198, 0.559),
+          rgba(216, 219, 227, 0.283)
+        ),
+        url('/assets/image.jpeg');
+      opacity: 0.25; /* Set the desired opacity level here */
+      background-position: center;
+      background-size: cover;
+      z-index: -1;
+    }
   }
 
-  .section-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: linear-gradient(
-        180deg,
-        rgba(0, 17, 255, 0.978),
-        rgba(56, 100, 232, 0.872),
-        rgba(103, 126, 198, 0.559),
-        rgba(216, 219, 227, 0.283)
-      ),
-      url('/assets/image.jpeg');
-    opacity: 0.25; /* Set the desired opacity level here */
-    background-position: center;
-    background-size: cover;
-    z-index: -1;
-    inset: 0;
-    /* Ensures the content of the container is not affected */
-  }
   .hero {
-    /* 2080px */
     max-width: 130rem;
     margin: 0 auto;
     padding: 2rem 8rem;
     display: grid;
-    grid-template-columns: minmax(300px, 1fr) minmax(350px, 1fr);
+    // grid-template-columns: minmax(300px, 1fr) minmax(350px, 1fr);
+    grid-template-columns: minmax(300px, 0.9fr) minmax(330px, 1.1fr);
+
     gap: 2rem;
     place-items: center;
+
+    @media (max-width: 59em) {
+      padding: 1rem 0.5rem;
+      grid-template-columns: minmax(300px, 1fr) minmax(200px, 1fr);
+      gap: 0;
+    }
+
+    @media (max-width: 44em) {
+      padding: 1rem 2.5rem 3rem 2.5rem;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 34em) {
+      padding: 1rem 0 2.5rem 1rem;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+    }
   }
 
   .hero-text-box {
@@ -90,40 +104,49 @@ import Form from './Form.astro';
     justify-content: center;
     align-items: start;
     justify-items: start;
+
+    @media (max-width: 59em) {
+      padding: 0 2rem;
+      row-gap: 2.5rem;
+    }
+
+    @media (max-width: 34em) {
+      row-gap: 3rem;
+      margin-bottom: 5rem;
+    }
   }
 
   .header__title p {
     font-size: 1.8rem;
     font-weight: 500;
-  }
 
-  .header__title p:nth-child(odd) {
-    font-size: 2rem;
+    &:nth-child(odd) {
+      font-size: 2rem;
+    }
   }
 
   .highlight {
     position: relative;
     z-index: 1;
-  }
 
-  .highlight::after {
-    display: block;
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    opacity: 0.7;
-    transform: scale(1.07, 1.05) skewX(-15deg);
-    background-image: var(--gradient-primary);
+    &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      opacity: 0.7;
+      transform: scale(1.07, 1.05) skewX(-15deg);
+      background-image: var(--gradient-primary);
+    }
   }
 
   .btn {
     display: inline-block;
     background-color: black;
-    // background-color: var(--clr-primary-200);
     font-size: 1.6rem;
     font-family: inherit;
     font-weight: 500;
@@ -132,52 +155,5 @@ import Form from './Form.astro';
     border-radius: 10rem;
     cursor: pointer;
     transition: all 0.3s;
-  }
-  @media (max-width: 59em) {
-    .hero {
-      padding: 1rem 0.5rem;
-      grid-template-columns: minmax(250px, 1fr) minmax(250px, 1fr);
-      gap: 0;
-    }
-
-    .header__title {
-      flex: 1;
-      display: grid;
-      padding: 0 2rem;
-      row-gap: 2.5rem;
-    }
-
-    .hero-text-box {
-      // background-color: rgba(245, 224, 210, 0.28);
-    }
-  }
-
-  /* BELOW 704px (Smaller tablets) */
-  @media (max-width: 44em) {
-    .section-hero {
-      min-height: 60vh;
-      // padding: max(3rem, 5vh) 0;
-    }
-    .hero {
-      padding: 1rem 2.5rem 3rem 2.5rem;
-      gap: 1.5rem;
-      grid-template-columns: 1fr;
-    }
-  }
-
-  @media (max-width: 34em) {
-    .section-hero {
-      padding: max(4rem, 10vh) 0;
-    }
-    .hero {
-      padding: 1rem 0 2.5rem 1rem;
-      gap: 1.2rem;
-      grid-template-columns: 1fr;
-    }
-
-    .header__title {
-      row-gap: 3rem;
-      margin-bottom: 5rem;
-    }
   }
 </style>

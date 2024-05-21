@@ -4,10 +4,6 @@
   row-gap: 4.6rem;
   margin-bottom: 9.6rem;
 
-  &:not(:last-child) {
-    margin-bottom: 9.6rem;
-  }
-
   // Define column variations using a mixin
   @mixin grid-columns($count) {
     grid-template-columns: repeat($count, 1fr);
@@ -30,15 +26,12 @@
   }
 
   @media (max-width: 75em) {
-    column-gap: 2rem;
-    row-gap: 2.8rem;
-
     &--4-cols {
-      grid-template-columns: repeat(3, 1fr);
+      @include grid-columns(3);
     }
 
     &--6-cols {
-      grid-template-columns: repeat(2, 1fr);
+      @include grid-columns(2);
     }
   }
 
@@ -52,17 +45,14 @@
   }
 
   @media (max-width: 34em) {
-    .grid {
-      row-gap: 3rem;
-      margin-bottom: 4.6rem;
 
-      &--2-cols,
-      &--3-cols,
-      &--4-cols {
-        grid-template-columns: 1fr;
-      }
+
+
+    &--2-cols,
+    &--3-cols,
+    &--4-cols,
+    &--6-cols {
+      grid-template-columns: 1fr;
     }
   }
-
-
 }
