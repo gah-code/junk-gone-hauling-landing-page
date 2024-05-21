@@ -1,10 +1,11 @@
 :root {
-  --fs-700: 6rem;
-  --fs-600: 5.55rem;
+  --fs-700: 6.5rem;
+  --fs-600: 5.65rem;
   --fs-500: 4.15rem;
   --fs-400: 3.8rem;
   --fs-300: 2.35rem;
-  --fs-200: 1.8rem;
+  --fs-200: 1.6rem;
+
   --fs-text: 1rem;
 
   --clr-bg: white;
@@ -25,8 +26,7 @@
     --fs-500: 3.5rem;
     // --fs-400: 3.125rem;
     --fs-400: 3rem;
-    --fs-300: 0.9725rem;
-
+    --fs-300: 1.9725rem;
     --fs-text: 1.5rem;
 
 
@@ -58,7 +58,8 @@ h2 {
   font-size: var(--fs-600);
   font-weight: 700;
   line-height: 1;
-  letter-spacing: -3.5px;
+  letter-spacing: -1.5px;
+
   // line-height: 1.3;
 
 
@@ -86,11 +87,12 @@ h3 {
 }
 
 h4 {
-  font-size: var(--fs-200);
+  font-size: var(--fs-300);
   font-weight: 500;
   text-transform: uppercase;
-  color: rgb(255, 251, 0);
+  color: #f8f7f7;
   margin-bottom: 1rem;
+  // letter-spacing: 1px;
 
   @media (max-width: 59em) {
     margin-bottom: 0.5rem;
@@ -98,7 +100,7 @@ h4 {
   }
 
   @media (max-width: 34em) {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
     font-size: var(--fs-200);
   }
 }
@@ -116,7 +118,7 @@ body {
   font-weight: 400;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #343f61;
+  // background-color: #343f61;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

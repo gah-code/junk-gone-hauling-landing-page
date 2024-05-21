@@ -13,11 +13,11 @@ import myImage from '../../assets/image.jpeg';
     <div class='features__feature'>
       <div class='features__icon'>
         <svg data-icon='icon'>
-          <use xlink:href='/icons.svg#icon-credit-card'></use>
+          <use xlink:href='/icons.svg#icon-globe'></use>
         </svg>
       </div>
       <h5 class='features__header'>ECO-FRIENDLY</h5>
-      <p>
+      <p class='features__description'>
         Not every junk item is meant to be thrown away, and we understand that.
         Our team sorts your junk into three categories: Recycle, Donate, Dispose
         Of, and removes it accordingly.
@@ -32,7 +32,7 @@ import myImage from '../../assets/image.jpeg';
       <h5 class='features__header'>
         Our team is professional, friendly, and dedicated
       </h5>
-      <p>
+      <p class='features__description'>
         Quasi, fugit in cumque cupiditate reprehenderit debitis animi enim
         eveniet consequatur odit quam quos possimus assumenda dicta fuga
         inventore ab.
@@ -45,10 +45,9 @@ import myImage from '../../assets/image.jpeg';
 
 <style lang='scss' is:global>
   section {
-    padding: 12rem 2rem;
-    border-top: 1px solid #ddd;
-    background-color: #ab7272;
-    /* // background-color: var(--clr-primary-800); */
+    padding: 14rem 2rem;
+    border-top: 1px solid #f4f5cd;
+    background-color: #efece0;
     transition:
       transform 1s,
       opacity 1s;
@@ -58,8 +57,6 @@ import myImage from '../../assets/image.jpeg';
     grid-template-columns: 1fr 1fr;
     column-gap: 2rem;
     row-gap: 12rem;
-    /* margin: 4rem; */
-    background-color: rgba(252, 250, 243, 0.43);
   }
 
   .features__img {
@@ -70,22 +67,14 @@ import myImage from '../../assets/image.jpeg';
   .features__feature {
     align-self: center;
     justify-self: center;
-    width: 85%;
-
-    p {
-      font-size: 1.8rem;
-      font-weight: 500;
-      // margin-bottom: 1rem;
-    }
-    /* // font-size: 1.5rem; */
+    width: 75%;
   }
 
   .features__icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ab7272;
-    /* background-color: var(--clr-primary-200); */
+    background-color: var(--clr-primary-100);
     height: 5rem;
     width: 5rem;
     border-radius: 50%;
@@ -100,40 +89,53 @@ import myImage from '../../assets/image.jpeg';
   }
 
   .features__header {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 3.3rem;
+    font-weight: 700;
+    margin-bottom: 1.8rem;
+    line-height: 1.05;
+
+    color: var(--clr-primary-100);
+  }
+
+  .features__description {
+    color: #131313;
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin-bottom: 4rem;
   }
   @media (max-width: 44em) {
     section {
-      padding: 8rem 1rem;
+      padding: 6rem 1rem;
       border-top: 1px solid #ddd;
-      background-color: #953636;
     }
     .features {
       grid-template-columns: 1fr;
       row-gap: 6.5rem;
       margin: 5rem 0;
-      padding: 0 0.5rem;
-
-      // margin: 5rem 3rem;
-      // border: solid 3px yellowgreen;
+      padding: 2rem 1.5rem;
     }
 
     .features__feature {
-      width: 95%;
+      width: 90%;
+      padding: 2rem 0;
     }
+
+    .features__description {
+      margin-bottom: 4rem;
+    }
+
     .features__feature:nth-child(2) {
       grid-row: 1;
-
-      // background-color: rgb(216, 174, 255);
     }
     .features__feature:nth-child(3) {
       grid-row: 3;
-      background-color: blueviolet;
+
+      .btn {
+        margin-top: 3rem;
+      }
     }
     .features__feature:nth-child(6) {
       grid-row: 5;
-      background-color: blueviolet;
     }
   }
 </style>

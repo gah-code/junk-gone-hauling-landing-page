@@ -14,6 +14,10 @@ import Form from './Form.astro';
           <span class='highlight'>SAN JOSE</span>
         </h1>
 
+        <p>
+          We are a full service junk removal company, providing you with all the
+          services that you need to get rid of your junk on your terms.
+        </p>
         <p>We handle the heavy lifting, so you don't have to!</p>
         <button class='btn btn--text btn--scroll-to'
           >Learn more &DownArrow;</button
@@ -31,6 +35,8 @@ import Form from './Form.astro';
     min-height: 70vh;
     position: relative;
     background-color: transparent;
+    background-color: #343f61;
+
     outline: solid 3px #fdf2e9;
     padding: max(4rem, 15vh) 0;
     isolation: isolate;
@@ -45,9 +51,10 @@ import Form from './Form.astro';
     bottom: 0;
     background-image: linear-gradient(
         180deg,
-        rgba(0, 17, 255, 0.956),
-        rgba(82, 121, 240, 0.586),
-        rgba(103, 122, 180, 0.361)
+        rgba(0, 17, 255, 0.978),
+        rgba(56, 100, 232, 0.872),
+        rgba(103, 126, 198, 0.559),
+        rgba(216, 219, 227, 0.283)
       ),
       url('/assets/image.jpeg');
     opacity: 0.25; /* Set the desired opacity level here */
@@ -69,7 +76,6 @@ import Form from './Form.astro';
   }
 
   .hero-text-box {
-    // height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,16 +85,20 @@ import Form from './Form.astro';
   .header__title {
     flex: 1;
     display: grid;
-    row-gap: 4rem;
+    row-gap: 4.2rem;
     align-content: center;
     justify-content: center;
-
     align-items: start;
     justify-items: start;
+  }
 
-    p {
-      font-size: 1.8rem;
-    }
+  .header__title p {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  .header__title p:nth-child(odd) {
+    font-size: 2rem;
   }
 
   .highlight {
@@ -105,7 +115,7 @@ import Form from './Form.astro';
     height: 100%;
     width: 100%;
     z-index: -1;
-    opacity: 0.6;
+    opacity: 0.7;
     transform: scale(1.07, 1.05) skewX(-15deg);
     background-image: var(--gradient-primary);
   }

@@ -21,10 +21,20 @@
   --clr-secondary-500: hsl(57, 95%, 75%);
   --clr-secondary-600: hsl(57, 100%, 90%);
   --clr-secondary-700: hsl(55, 93%, 95%);
+
+
+  --clr-grey-100: #dadada;
+  --clr-grey-200: #b6b5b5;
+  --clr-grey-300: #7e7d7d;
+  --clr-grey-400: #595858;
+  --clr-grey-500: #363636;
+  --clr-grey-600: #1f1f1f;
+
+
   // Sass control directive interates over each key-value pair in the $colors map
   --gradient-primary: linear-gradient(to top left,
       hsl(57, 100%, 50%),
-      hsl(57, 95%, 53%));
+      hsl(57, 98%, 51%));
 
 
 
@@ -35,9 +45,9 @@
   --text-font-size: 1.8rem;
   --main-font-color: #333;
 
-  @each $color, $shades in $colors {
-    @each $shade, $value in $shades {
-      --#{$color}-#{$shade}: #{$value};
-    }
-  }
+  // @each $color, $shades in $colors {
+  //   @each $shade, $value in $shades {
+  //     --#{$color}-#{$shade}: #{$value};
+  //   }
+  // }
 }

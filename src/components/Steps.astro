@@ -1,3 +1,7 @@
+---
+import '../styles/base/_color.scss';
+---
+
 <section>
   <div class='container'>
     <div class='grid grid--6-cols'>
@@ -60,18 +64,20 @@
   </div>
 </section>
 <style lang='scss'>
+  // @use '/styles/scss/base/color' as *;
+
   $main-border-color: #222;
   $icon-color: #e67e22;
   $icon-bg-color: rgba(82, 121, 240, 0.686);
   $title-font-size: 2.4rem;
   $text-font-size: 1.8rem;
-  $main-font-color: #333;
+  $main-font-color: #222;
   section {
-    background-color: rgba(255, 226, 216, 0.867);
+    // background-color: rgba(255, 226, 216, 0.867);
+    background-color: #efece0;
 
     padding: 12rem 2rem;
     border-top: 1px solid #ddd;
-    /* // background-color: var(--clr-primary-800); */
     transition:
       transform 1s,
       opacity 1s;
@@ -86,20 +92,16 @@
   // }
   .grid {
     // background-color: rgb(83, 122, 134);
-    row-gap: 4.6rem;
-    margin-bottom: 9.6rem;
+    // row-gap: 4.6rem;
+    // margin-bottom: 9.6rem;
   }
 
   .feature {
-    border: solid 3px $main-border-color;
-    padding: 2rem;
-    color: #333;
-
-    background-color: var(--clr-secondary-500);
-    // margin: 5rem 0; // Uncomment if margin is needed
-
+    border: solid 4px $main-border-color;
+    padding: 4rem 2rem;
+    color: #222;
     &:nth-child(even) {
-      background-color: rgba(202, 221, 240, 0.93);
+      background-color: #efece0;
       border: solid 4px var(--clr-secondary-100);
       // color: #fff;
     }
@@ -110,7 +112,8 @@
     color: #ffee00;
     height: 3.2rem;
     width: 3.2rem;
-    background-color: $icon-bg-color;
+    // background-color: $icon-bg-color;
+    background-color: rgba(23, 34, 113, 0.94);
     margin-bottom: 3.2rem;
     padding: 1.6rem;
     border-radius: 50%;
@@ -118,14 +121,15 @@
 
   .feature-title {
     font-size: $title-font-size;
-    color: $main-font-color;
     font-weight: 700;
-    margin-bottom: 1.8rem;
+    margin-bottom: 1.4rem;
+    position: relative;
   }
 
   .feature-text {
     font-size: $text-font-size;
     line-height: 1.8;
-    padding-bottom: 1.5rem;
+    padding-bottom: 2rem;
+    font-weight: 500;
   }
 </style>

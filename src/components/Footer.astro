@@ -1,0 +1,246 @@
+---
+import Logo from '../../public/junk-gone-logo.png';
+import { Image } from 'astro:assets';
+---
+
+<footer class='footer'>
+  <div class='container grid grid--footer'>
+    <div class='logo-col'>
+      <a href='#' class='footer-logo'>
+        <Image class='logo' alt='Omnifood logo' src={Logo} />
+      </a>
+
+      <ul class='social-links'>
+        <li>
+          <a class='footer-link' href='#'
+            ><ion-icon class='social-icon' name='logo-instagram'></ion-icon></a
+          >
+        </li>
+        <li>
+          <a class='footer-link' href='#'
+            ><ion-icon class='social-icon' name='logo-facebook'></ion-icon></a
+          >
+        </li>
+        <li>
+          <a class='footer-link' href='#'
+            ><ion-icon class='social-icon' name='logo-twitter'></ion-icon></a
+          >
+        </li>
+      </ul>
+
+      <p class='copyright'>
+        Copyright &copy; <span class='year'>2027</span> by Junk Gone Hauling & Junk
+        Removal Services. All rights reserved.
+      </p>
+    </div>
+
+    <div class='address-col'>
+      <p class='footer-heading'>Contact us</p>
+      <address class='contacts'>
+        <p class='address'>396-A 4st Hollister, CA 95023</p>
+        <p>
+          <a class='footer-link' href='tel:408310-0246'>(408) 310-0246</a><br />
+          <a class='footer-link' href='mailto:Junkgone21@gmail.com'
+            >Junkgone21@gmail.com</a
+          >
+        </p>
+      </address>
+    </div>
+
+    <nav class='nav-col'>
+      <p class='footer-heading'>Services Areas</p>
+      <ul class='footer-nav'>
+        <li><a class='footer-link' href='#'>Hollister, CA</a></li>
+        <li><a class='footer-link' href='#'>Sign in</a></li>
+        <li><a class='footer-link' href='#'>iOS app</a></li>
+        <li><a class='footer-link' href='#'>Android app</a></li>
+      </ul>
+    </nav>
+
+    <nav class='nav-col'>
+      <p class='footer-heading'>Company</p>
+      <ul class='footer-nav'>
+        <li><a class='footer-link' href='#'>About Omnifood</a></li>
+        <li><a class='footer-link' href='#'>For Business</a></li>
+        <li><a class='footer-link' href='#'>Cooking partners</a></li>
+        <li><a class='footer-link' href='#'>Careers</a></li>
+      </ul>
+    </nav>
+
+    <nav class='nav-col'>
+      <p class='footer-heading'>Resources</p>
+      <ul class='footer-nav'>
+        <li><a class='footer-link' href='#'>Recipe directory </a></li>
+        <li><a class='footer-link' href='#'>Help center</a></li>
+        <li><a class='footer-link' href='#'>Privacy & terms</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<style is:global>
+  /* .container {
+    max-width: 120rem;
+    padding: 0 3.2rem;
+    margin: 0 auto;
+  } */
+
+  /* .grid {
+    display: grid;
+    column-gap: 6.4rem;
+    row-gap: 9.6rem;
+  } */
+  /* .grid:not(:last-child) {
+    margin-bottom: 9.6rem;
+  } */
+
+  /* .grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid--4-cols {
+    grid-template-columns: repeat(4, 1fr);
+  } */
+
+  .footer {
+    padding: 9.8rem 2rem;
+    border-top: 4px solid #164ee6;
+    background-color: var(--clr-grey-600);
+  }
+
+  .grid--footer {
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+    column-gap: 5rem;
+  }
+
+  .logo-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo {
+    width: 150px;
+    height: auto;
+  }
+
+  .footer-logo {
+    display: block;
+    margin-bottom: 3.2rem;
+  }
+
+  .social-links {
+    list-style: none;
+    display: flex;
+    gap: 2.4rem;
+  }
+
+  .social-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .copyright {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: var(--clr-grey-100)
+    /* margin-top: 4rem; */
+    font-weight: 500;
+  }
+
+  .footer-heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 4rem;
+    color: var(--clr-grey-100);
+  }
+
+  .contacts {
+    font-style: normal;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: black;
+  }
+
+  .address {
+    margin-bottom: 2.4rem;
+    color: var(--clr-grey-100);
+  }
+
+  .footer-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+.footer-link:link,
+.footer-link:visited {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #767676;
+    transition: all 0.3s;
+    font-weight: 500;
+
+  }
+
+  .footer-link:hover,
+  .footer-link:active {
+    color: var(--clr-secondary-200);
+  }
+
+  @media (max-width: 54em) {
+    /* .grid--3-cols,
+    .grid--4-cols {
+      grid-template-columns: repeat(2, 1fr);
+    } */
+
+    .grid--footer {
+      grid-template-columns: repeat(6, 1fr);
+      column-gap: 2.5rem;
+      
+    }
+
+    .logo-col,
+    .address-col {
+      grid-column: span 3;
+    }
+    .nav-col {
+      grid-row: 1;
+      grid-column: span 2;
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  @media (max-width: 34em) {
+    /* .grid {
+      row-gap: 4.8rem;
+    } */
+
+    .footer {
+      padding: 6.8rem 1rem;
+    }
+
+    .footer-heading {
+    font-size: 1.6rem;
+    margin-bottom: 2.8rem;
+  
+  }
+
+    .grid--2-cols,
+    .grid--3-cols,
+    .grid--4-cols {
+      grid-template-columns: 1fr;
+    }
+
+    .logo {
+      width: 145px;
+    }
+
+    
+  }
+</style>
