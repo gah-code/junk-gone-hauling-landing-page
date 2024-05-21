@@ -2,7 +2,7 @@
   <div class='container'>
     <div class='grid grid--6-cols'>
       <div class='feature'>
-        <div class='feature-icon' name='infinite-outline'>01.</div>
+        <ion-icon class='feature-icon' name='call-outline'></ion-icon>
         <p class='feature-title'>Initial Contact</p>
         <p class='feature-text'>
           You can contact Junk Gone Hauling & Junk Removal through phone, email,
@@ -12,7 +12,7 @@
         </p>
       </div>
       <div class='feature'>
-        <div class='feature-icon' name='infinite-outline'>02.</div>
+        <ion-icon class='feature-icon' name='chatbubbles-outline'></ion-icon>
         <p class='feature-title'>Free Estimate</p>
         <p class='feature-text'>
           We will provide you with a free estimate based on your information.
@@ -21,7 +21,7 @@
         </p>
       </div>
       <div class='feature'>
-        <div class='feature-icon' name='infinite-outline'>03.</div>
+        <ion-icon class='feature-icon' name='calendar-outline'></ion-icon>
         <p class='feature-title'>Scheduling</p>
         <p class='feature-text'>
           Once you agree to the estimate, you’ll schedule a convenient time for
@@ -30,7 +30,7 @@
         </p>
       </div>
       <div class='feature'>
-        <div class='feature-icon' name='infinite-outline'>04.</div>
+        <ion-icon class='feature-icon' name='trash-outline'></ion-icon>
         <p class='feature-title'>Removal</p>
         <p class='feature-text'>
           We will provide you with a free estimate based on your information.
@@ -39,7 +39,7 @@
         </p>
       </div>
       <div class='feature'>
-        <div class='feature-icon' name='infinite-outline'>05.</div>
+        <ion-icon class='feature-icon' name='checkmark-done-outline'></ion-icon>
         <p class='feature-title'>Cleanup</p>
         <p class='feature-text'>
           We will provide you with a free estimate based on your information.
@@ -48,7 +48,7 @@
         </p>
       </div>
       <div class='feature'>
-        <div class='feature-icon' name='infinite-outline'>06.</div>
+        <ion-icon class='feature-icon' name='cash-outline'>06.</ion-icon>
         <p class='feature-title'>Payment</p>
         <p class='feature-text'>
           We will provide you with a free estimate based on your information.
@@ -58,12 +58,17 @@
       </div>
     </div>
   </div>
-  
 </section>
-<style lang="scss">
-section {
-  background-color: darksalmon;
-  
+<style lang='scss'>
+  $main-border-color: #222;
+  $icon-color: #e67e22;
+  $icon-bg-color: rgba(82, 121, 240, 0.686);
+  $title-font-size: 2.4rem;
+  $text-font-size: 1.8rem;
+  $main-font-color: #333;
+  section {
+    background-color: rgba(255, 226, 216, 0.867);
+
     padding: 12rem 2rem;
     border-top: 1px solid #ddd;
     /* // background-color: var(--clr-primary-800); */
@@ -71,7 +76,56 @@ section {
       transform 1s,
       opacity 1s;
   }
-.grid {
-      background-color: rgb(83, 122, 134);
+
+  // .ion-inner {
+  //   color: blue;
+  // }
+
+  // .ion-icon {
+  //   color: rgb(101, 101, 194);
+  // }
+  .grid {
+    // background-color: rgb(83, 122, 134);
+    row-gap: 4.6rem;
+    margin-bottom: 9.6rem;
+  }
+
+  .feature {
+    border: solid 3px $main-border-color;
+    padding: 2rem;
+    color: #333;
+
+    background-color: var(--clr-secondary-500);
+    // margin: 5rem 0; // Uncomment if margin is needed
+
+    &:nth-child(even) {
+      background-color: rgba(202, 221, 240, 0.93);
+      border: solid 4px var(--clr-secondary-100);
+      // color: #fff;
     }
-  </style> 
+  }
+
+  .feature-icon {
+    font-size: 4rem;
+    color: #ffee00;
+    height: 3.2rem;
+    width: 3.2rem;
+    background-color: $icon-bg-color;
+    margin-bottom: 3.2rem;
+    padding: 1.6rem;
+    border-radius: 50%;
+  }
+
+  .feature-title {
+    font-size: $title-font-size;
+    color: $main-font-color;
+    font-weight: 700;
+    margin-bottom: 1.8rem;
+  }
+
+  .feature-text {
+    font-size: $text-font-size;
+    line-height: 1.8;
+    padding-bottom: 1.5rem;
+  }
+</style>

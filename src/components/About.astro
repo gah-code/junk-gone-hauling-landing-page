@@ -16,7 +16,7 @@ import myImage from '../../assets/image.jpeg';
           <use xlink:href='/icons.svg#icon-credit-card'></use>
         </svg>
       </div>
-      <h3 class='features__header'>ECO-FRIENDLY</h3>
+      <h5 class='features__header'>ECO-FRIENDLY</h5>
       <p>
         Not every junk item is meant to be thrown away, and we understand that.
         Our team sorts your junk into three categories: Recycle, Donate, Dispose
@@ -37,7 +37,7 @@ import myImage from '../../assets/image.jpeg';
         eveniet consequatur odit quam quos possimus assumenda dicta fuga
         inventore ab.
       </p>
-      <button>btn</button>
+      <button class='btn'>btn</button>
     </div>
     <Image class='features__img lazy-img' src={myImage} alt='Credit card' />
   </div>
@@ -45,7 +45,7 @@ import myImage from '../../assets/image.jpeg';
 
 <style lang='scss' is:global>
   section {
-    padding: 12rem 3rem;
+    padding: 12rem 2rem;
     border-top: 1px solid #ddd;
     background-color: #ab7272;
     /* // background-color: var(--clr-primary-800); */
@@ -56,7 +56,7 @@ import myImage from '../../assets/image.jpeg';
   .features {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 3rem;
+    column-gap: 2rem;
     row-gap: 12rem;
     /* margin: 4rem; */
     background-color: rgba(252, 250, 243, 0.43);
@@ -71,6 +71,12 @@ import myImage from '../../assets/image.jpeg';
     align-self: center;
     justify-self: center;
     width: 85%;
+
+    p {
+      font-size: 1.8rem;
+      font-weight: 500;
+      // margin-bottom: 1rem;
+    }
     /* // font-size: 1.5rem; */
   }
 
@@ -94,21 +100,31 @@ import myImage from '../../assets/image.jpeg';
   }
 
   .features__header {
-    // font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
   }
   @media (max-width: 44em) {
+    section {
+      padding: 8rem 1rem;
+      border-top: 1px solid #ddd;
+      background-color: #953636;
+    }
     .features {
       grid-template-columns: 1fr;
       row-gap: 6.5rem;
       margin: 5rem 0;
-      padding: 0 1.5rem;
+      padding: 0 0.5rem;
 
       // margin: 5rem 3rem;
       // border: solid 3px yellowgreen;
     }
+
+    .features__feature {
+      width: 95%;
+    }
     .features__feature:nth-child(2) {
       grid-row: 1;
+
       // background-color: rgb(216, 174, 255);
     }
     .features__feature:nth-child(3) {

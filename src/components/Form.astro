@@ -67,6 +67,7 @@
     background-size: cover;
     min-height: 70vh;
     position: relative; */
+    z-index: 2;
   }
   .cta {
     display: grid;
@@ -76,6 +77,7 @@
     max-width: 500px;
     border: solid 4px var(--clr-secondary-200);
     background-color: var(--clr-primary-200);
+    z-index: 1;
     /* border: solid 3px #fff; */
     /* background-color: var(--clr-primary-200); */
   }
@@ -111,6 +113,7 @@
     grid-template-columns: 1fr;
     column-gap: 3rem;
     row-gap: 1.5rem;
+    z-index: 1;
   }
   .cta-form label {
     display: block;
@@ -174,7 +177,7 @@
 
   @media (max-width: 44em) {
     .form-wrapper {
-      padding: 1rem 1.5rem;
+      padding: 1rem 1rem;
     }
     .cta {
       /* background-color: #705f51; */
@@ -183,6 +186,22 @@
     .cta-text-box {
       padding: 6rem 1rem 6rem 1rem;
       /* min-width: 450px; */
+
+      /* color: #45260a; */
+    }
+  }
+
+  @media (max-width: 34em) {
+    .cta .heading-secondary {
+      margin-bottom: 3rem;
+    }
+    .form-wrapper {
+      padding: 1rem 0;
+    }
+
+    .cta-text-box {
+      padding: 4rem 1rem 5rem 1rem;
+      width: 420px;
 
       /* color: #45260a; */
     }

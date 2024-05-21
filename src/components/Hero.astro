@@ -30,9 +30,32 @@ import Form from './Form.astro';
   .section-hero {
     min-height: 70vh;
     position: relative;
-    // background-color: transparent;
+    background-color: transparent;
     outline: solid 3px #fdf2e9;
     padding: max(4rem, 15vh) 0;
+    isolation: isolate;
+  }
+
+  .section-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 17, 255, 0.956),
+        rgba(82, 121, 240, 0.586),
+        rgba(103, 122, 180, 0.361)
+      ),
+      url('/assets/image.jpeg');
+    opacity: 0.25; /* Set the desired opacity level here */
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    inset: 0;
+    /* Ensures the content of the container is not affected */
   }
   .hero {
     /* 2080px */
@@ -50,6 +73,7 @@ import Form from './Form.astro';
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1;
   }
 
   .header__title {
@@ -61,6 +85,10 @@ import Form from './Form.astro';
 
     align-items: start;
     justify-items: start;
+
+    p {
+      font-size: 1.8rem;
+    }
   }
 
   .highlight {
@@ -106,11 +134,11 @@ import Form from './Form.astro';
       flex: 1;
       display: grid;
       padding: 0 2rem;
-      row-gap: 2rem;
+      row-gap: 2.5rem;
     }
 
     .hero-text-box {
-      background-color: rgba(245, 224, 210, 0.28);
+      // background-color: rgba(245, 224, 210, 0.28);
     }
   }
 
@@ -128,10 +156,18 @@ import Form from './Form.astro';
   }
 
   @media (max-width: 34em) {
+    .section-hero {
+      padding: max(4rem, 10vh) 0;
+    }
     .hero {
       padding: 1rem 0 2.5rem 1rem;
-      gap: 1.1rem;
+      gap: 1.2rem;
       grid-template-columns: 1fr;
+    }
+
+    .header__title {
+      row-gap: 3rem;
+      margin-bottom: 5rem;
     }
   }
 </style>

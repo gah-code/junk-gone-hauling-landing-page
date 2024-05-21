@@ -22,12 +22,11 @@ import { Image } from 'astro:assets';
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 8rem;
+    height: 9rem;
     width: 100%;
     padding: 0 4rem;
     z-index: 100;
-    background-color: aqua;
-
+    background-color: var(--clr-secondary-100);
     /* Because we want header to be sticky later */
     // height: 9.6rem;
     // padding: 0 4.8rem;
@@ -65,7 +64,7 @@ import { Image } from 'astro:assets';
     padding: 1.2rem 2.4rem;
     border-radius: 9px;
     color: #fff;
-    background-color: #e67e22;
+    // background-color: #e67e22;
   }
 
   .main-nav-link.nav-cta:hover,
@@ -75,12 +74,19 @@ import { Image } from 'astro:assets';
 
   .nav__item {
     margin-left: 4rem;
+    background-color: var(--clr-primary-200);
+    border-radius: 4rem;
+    border: solid 3px var(--clr-text);
+    font-size: 1.4rem;
+
+    // background-color: none;
   }
 
   .nav__link:link,
   .nav__link:visited {
     // font-size: 1.8rem;
     font-weight: 500;
+    border-radius: 4rem;
     color: #f4f2f2;
     text-decoration: none;
     display: block;
@@ -89,11 +95,10 @@ import { Image } from 'astro:assets';
   .nav__link--btn:link,
   .nav__link--btn:visited {
     // padding: 1.3rem 3.1rem;
-    padding: 1rem 3.1rem;
-
+    padding: 1.3rem 4.2rem;
     border-radius: 4rem;
-    background-color: var(--clr-primary-200);
-    border: solid 3px var(--clr-secondary-100);
+    // background-color: var(--clr-primary-200);
+    // border: solid 3px var(--clr-secondary-100);
   }
 
   .nav__link--btn:hover,

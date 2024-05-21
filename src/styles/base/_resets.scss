@@ -19,7 +19,7 @@
 html {
   font-family: 'Poppins', sans-serif;
   /* background-color: #f3f3f3; */
-  background-color: var(--clr-secondary-700);
+  // background-color: var(--clr-secondary-700);
   /* 10px / 16px = 0.625 = 62.5% */
   /* Percentage of user's browser font-size setting */
   font-size: 62.5%;
@@ -43,7 +43,7 @@ body {
 //  the width property is set to be the minimum of either 100% of the viewport width minus 4 rem, or 55 characters, whichever is smaller. This ensures that the element remains responsive and adjusts its width according to the available space, but it won't exceed 55 characters in width.
 
 body {
-  background: hsl(0 15% 90%);
+  // background: hsl(0 15% 90%);
   // needs to be defined
   // width: min(100% - 4rem, 70ch);
   margin-inline: auto;

@@ -16,17 +16,17 @@ import About from '../components/About.astro';
     </div>
     <About />
     <div class='section__title'>
-      <h2 class='section__description'>LEAVE THE JUNK TO US!</h2>
-      <h3 class='section__header'>
+      <h4 class='section__description'>LEAVE THE JUNK TO US!</h4>
+      <h2 class='section__header'>
         Everything you need in a modern junk removal service
-      </h3>
+      </h2>
     </div>
     <Steps />
   </main>
 </Layout>
 <style>
   main {
-    background-color: rgb(46, 46, 159);
+    /* background-color: rgb(46, 46, 159); */
   }
 
   .section__title {
@@ -56,5 +56,12 @@ import About from '../components/About.astro';
     line-height: 1.2;
     letter-spacing: -3.5px; */
     /* color: var(--clr-text); */
+  }
+
+  @media (max-width: 34em) {
+    .section__title {
+      text-align: center;
+      width: 95%;
+    }
   }
 </style>
