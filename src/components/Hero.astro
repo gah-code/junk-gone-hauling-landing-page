@@ -71,7 +71,6 @@ import Form from './Form.astro';
       padding: 1rem 5.5rem;
       grid-template-columns: minmax(300px, 1fr) minmax(200px, 1fr);
       // grid-template-columns: 1fr;
-
       gap: 2rem;
     }
 
@@ -85,7 +84,7 @@ import Form from './Form.astro';
     @media (max-width: 34em) {
       padding: 1rem 2.5rem 2.5rem 2.5rem;
       grid-template-columns: 1fr;
-      gap: 5rem;
+      gap: 3rem;
     }
   }
 
@@ -111,17 +110,19 @@ import Form from './Form.astro';
     }
 
     @media (max-width: 34em) {
-      row-gap: 3rem;
-      margin-bottom: 5rem;
+      row-gap: 3.5rem;
+      margin-bottom: 4.5rem;
     }
   }
 
   .header__title p {
     font-size: 1.8rem;
-    font-weight: 500;
+    font-weight: 400;
 
     &:nth-child(odd) {
+      font-weight: 500;
       font-size: 2rem;
+      padding-bottom: 1rem;
     }
   }
 
@@ -151,7 +152,7 @@ import Form from './Form.astro';
     font-family: inherit;
     font-weight: 500;
     border: none;
-    padding: 1.25rem 4.5rem;
+    padding: 1.05rem 4rem;
     border-radius: 10rem;
     cursor: pointer;
     transition: all 0.3s;
@@ -160,7 +161,8 @@ import Form from './Form.astro';
 
   @media (max-width: 34em) {
     .hero {
-      padding: 3.8rem 1.8rem;
+      padding: 3rem 1.5rem 3rem 1rem;
+      place-items: center stretch;
     }
   }
 </style>

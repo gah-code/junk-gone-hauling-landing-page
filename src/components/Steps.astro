@@ -66,6 +66,7 @@ import '../styles/base/_color.scss';
 <style lang='scss'>
   // @use '/styles/scss/base/color' as *;
 
+  @import '../styles/base/_color.scss';
   $main-border-color: #222;
   $icon-color: #e67e22;
   $icon-bg-color: rgba(82, 121, 240, 0.686);
@@ -74,7 +75,17 @@ import '../styles/base/_color.scss';
   $main-font-color: #222;
   section {
     // background-color: rgba(255, 226, 216, 0.867);
-    background-color: #efece0;
+    // background-color: #efece0;
+    padding: 14rem 2rem;
+    border-top: 1px solid #f4f5cd;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-grey-light-2, 0.9),
+        rgba($color-grey-light-1, 0.8)
+      ),
+      url('/image.jpeg');
+    // opacity: 0.5;
+    background-size: cover;
 
     padding: 12rem 2rem;
     border-top: 1px solid #ddd;
@@ -100,10 +111,20 @@ import '../styles/base/_color.scss';
     border: solid 4px $main-border-color;
     padding: 4rem 2rem;
     color: #222;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    transition: transform 0.3s;
+    background-color: rgba($color-white, 0.9);
+
     &:nth-child(even) {
-      background-color: #efece0;
+      // background-color: #efece0;
+      // background-color: rgba($color-white, 0.3);
+
       border: solid 4px var(--clr-secondary-100);
       // color: #fff;
+    }
+    &:hover {
+      transform: translateY(-0.5rem) scale(1.01);
+      box-shadow: 0 1.6rem 4rem rgba($color-black, 0.2);
     }
   }
 

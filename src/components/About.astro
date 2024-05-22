@@ -3,7 +3,13 @@ import { Image } from 'astro:assets';
 import myImage from '../../assets/image.jpeg';
 ---
 
-<section>
+<section class='about'>
+  <!-- <div class='section__title'>
+    <h4 class='section__description'>LEAVE THE JUNK TO US!</h4>
+    <h2 class='section__header'>
+      Everything you need in a junk removal service
+    </h2>
+  </div> -->
   <div class='features'>
     <Image
       class='features__img lazy-img'
@@ -41,102 +47,130 @@ import myImage from '../../assets/image.jpeg';
     </div>
     <Image class='features__img lazy-img' src={myImage} alt='Credit card' />
   </div>
-</section>
 
-<style lang='scss' is:global>
-  section {
-    padding: 14rem 2rem;
-    border-top: 1px solid #f4f5cd;
-    background-color: #efece0;
-    transition:
-      transform 1s,
-      opacity 1s;
-  }
-  .features {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 2rem;
-    row-gap: 12rem;
-  }
+  <style lang='scss' is:global>
+    @import '../styles/base/_color.scss';
 
-  .features__img {
-    width: 100%;
-    height: auto; /* Ensures the image maintains its aspect ratio */
-  }
+    .about {
+      padding: 9rem 2rem;
+      border-top: 1px solid #f4f5cd;
+      background-color: #efece0;
 
-  .features__feature {
-    align-self: center;
-    justify-self: center;
-    width: 75%;
-  }
+      transition:
+        transform 1s,
+        opacity 1s;
+    }
 
-  .features__icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--clr-primary-100);
-    height: 5rem;
-    width: 5rem;
-    border-radius: 50%;
-    margin-bottom: 2rem;
-  }
-
-  .features__icon svg {
-    height: 2.5rem;
-    width: 2.5rem;
-    fill: #fff;
-    z-index: 100;
-  }
-
-  .features__header {
-    font-size: 3.3rem;
-    font-weight: 700;
-    margin-bottom: 1.8rem;
-    line-height: 1.05;
-
-    color: var(--clr-primary-100);
-  }
-
-  .features__description {
-    color: #131313;
-    font-weight: 500;
-    font-size: 1.6rem;
-    margin-bottom: 4rem;
-  }
-  @media (max-width: 44em) {
-    section {
-      padding: 6rem 1rem;
-      border-top: 1px solid #ddd;
+    .section__title {
+      width: 80%;
+      margin: 0 auto;
+      // text-align: center;
+      color: darkslategray;
+      // padding: 0 0 8rem 0;
+    }
+    .section__description {
+      color: #000;
     }
     .features {
-      // display: grid;
-      grid-template-columns: 1fr;
-      row-gap: 6.5rem;
-      margin: 5rem 0;
-      padding: 2rem 1.5rem;
+      padding-top: 9rem;
+    }
+
+    @media (max-width: 34em) {
+      .section__title {
+        text-align: center;
+        width: 95%;
+      }
+    }
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 2rem;
+      row-gap: 12rem;
+    }
+
+    .features__img {
+      width: 100%;
+      height: auto; /* Ensures the image maintains its aspect ratio */
     }
 
     .features__feature {
-      width: 90%;
-      padding: 2rem 0;
+      align-self: center;
+      justify-self: center;
+      width: 75%;
+    }
+
+    .features__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--clr-primary-100);
+      height: 5rem;
+      width: 5rem;
+      border-radius: 50%;
+      margin-bottom: 2rem;
+    }
+
+    .features__icon svg {
+      height: 2.5rem;
+      width: 2.5rem;
+      fill: #fff;
+      z-index: 100;
+    }
+
+    .features__header {
+      font-size: 3.3rem;
+      font-weight: 700;
+      margin-bottom: 1.8rem;
+      line-height: 1.05;
+
+      color: var(--clr-primary-100);
     }
 
     .features__description {
+      color: #131313;
+      font-weight: 500;
+      font-size: 1.6rem;
       margin-bottom: 4rem;
     }
+    @media (max-width: 44em) {
+      section {
+        padding: 6rem 1rem;
+        border-top: 1px solid #ddd;
+      }
+      .features {
+        // display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 6.5rem;
+        margin: 5rem 0;
+        padding: 2rem 0;
+      }
 
-    .features__feature:nth-child(2) {
-      grid-row: 1;
-    }
-    .features__feature:nth-child(3) {
-      grid-row: 3;
+      .features__feature {
+        width: 90%;
+        padding: 2rem 0;
+      }
 
-      .btn {
-        margin-top: 3rem;
+      .features__header {
+        font-size: 3rem;
+      }
+
+      .features__description {
+        margin-bottom: 2rem;
+      }
+
+      .features__feature:nth-child(2) {
+        grid-row: 1;
+      }
+      .features__feature:nth-child(3) {
+        grid-row: 3;
+
+        .btn {
+          margin-top: 2rem;
+        }
+      }
+      .features__feature:nth-child(6) {
+        grid-row: 5;
       }
     }
-    .features__feature:nth-child(6) {
-      grid-row: 5;
-    }
-  }
-</style>
+  </style>
+</section>

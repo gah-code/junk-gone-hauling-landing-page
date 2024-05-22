@@ -79,6 +79,20 @@ h6 {
 }
 
 
+.btn {
+  display: inline-block;
+  background-color: var(--clr-secondary-300);
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: none;
+  padding: 1.15rem 3.85rem;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: rgb(28, 28, 27);
+}
+
 
 /*
   9. Create a root stacking context

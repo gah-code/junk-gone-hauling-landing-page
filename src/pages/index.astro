@@ -24,7 +24,7 @@ import About from '../components/About.astro';
     <Steps />
   </main>
 </Layout>
-<style>
+<style lang='scss'>
   main {
     /* background-color: rgb(46, 46, 159); */
 
@@ -36,20 +36,17 @@ import About from '../components/About.astro';
 
   .section__title {
     width: 70%;
-    margin: 9rem auto 9rem auto;
+    margin: 8rem auto 8rem auto;
 
     /* padding-bottom: 10rem; */
     /* background-color: rgb(43, 43, 237); */
   }
 
   .section__description {
-    /* font-size: 1.8rem; */
-    /* font-weight: 600;
-    text-transform: uppercase;
-    color: rgb(255, 251, 0); */
     /* color: var(--clr-primary-200); */
     /* // color: var(--clr-secondary-100); */
     /* margin-bottom: 1rem; */
+    color: aliceblue;
   }
 
   .section__header {
@@ -63,14 +60,16 @@ import About from '../components/About.astro';
     line-height: 1.2;
     letter-spacing: -3.5px; */
     /* color: var(--clr-text); */
+    padding: 0rem;
   }
 
   @media (max-width: 34em) {
     .section__title {
       text-align: center;
-      width: 95%;
+      width: 90%;
     }
   }
+
   /* 
   .hero {
     padding: 0 2.5rem 3rem 2.5rem;

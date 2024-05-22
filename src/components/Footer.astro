@@ -78,34 +78,7 @@ import { Image } from 'astro:assets';
   </div>
 </footer>
 
-<style is:global>
-  /* .container {
-    max-width: 120rem;
-    padding: 0 3.2rem;
-    margin: 0 auto;
-  } */
-
-  /* .grid {
-    display: grid;
-    column-gap: 6.4rem;
-    row-gap: 9.6rem;
-  } */
-  /* .grid:not(:last-child) {
-    margin-bottom: 9.6rem;
-  } */
-
-  /* .grid--2-cols {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .grid--3-cols {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .grid--4-cols {
-    grid-template-columns: repeat(4, 1fr);
-  } */
-
+<style lang='scss' is:global>
   .footer {
     padding: 9.8rem 2rem;
     border-top: 4px solid #164ee6;
@@ -147,7 +120,7 @@ import { Image } from 'astro:assets';
   .copyright {
     font-size: 1.4rem;
     line-height: 1.6;
-    color: var(--clr-grey-100)
+    color: var(--clr-grey-100);
     /* margin-top: 4rem; */
     font-weight: 500;
   }
@@ -178,14 +151,13 @@ import { Image } from 'astro:assets';
     gap: 2.4rem;
   }
 
-.footer-link:link,
-.footer-link:visited {
+  .footer-link:link,
+  .footer-link:visited {
     text-decoration: none;
     font-size: 1.6rem;
     color: #767676;
     transition: all 0.3s;
     font-weight: 500;
-
   }
 
   .footer-link:hover,
@@ -202,7 +174,6 @@ import { Image } from 'astro:assets';
     .grid--footer {
       grid-template-columns: repeat(6, 1fr);
       column-gap: 2.5rem;
-      
     }
 
     .logo-col,
@@ -226,10 +197,9 @@ import { Image } from 'astro:assets';
     }
 
     .footer-heading {
-    font-size: 1.6rem;
-    margin-bottom: 2.8rem;
-  
-  }
+      font-size: 1.6rem;
+      margin-bottom: 2.8rem;
+    }
 
     .grid--2-cols,
     .grid--3-cols,
@@ -241,12 +211,9 @@ import { Image } from 'astro:assets';
       width: 145px;
     }
 
-      .grid--footer {
+    .grid--footer {
       grid-template-columns: 1fr;
       column-gap: 2.5rem;
-      
     }
-
-    
   }
 </style>

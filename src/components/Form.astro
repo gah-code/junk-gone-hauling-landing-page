@@ -2,7 +2,7 @@
   <div class='form-box'>
     <div class='cta'>
       <div class='cta-text-box'>
-        <h4 class='heading-secondary'>START REMOVING TODAY!</h4>
+        <h5 class='heading-secondary'>Set up a call today</h5>
         <!-- <p class='form-description'>
           We handle the heavy lifting, so you don't have to!
         </p> -->
@@ -60,7 +60,9 @@
   </div>
 </div>
 
-<style>
+<style lang='scss'>
+  @import '../styles/base/_color.scss';
+
   .form-wrapper {
     /* background-image: url('https://assets.codepen.io/308367/mountain-with-stars.jpg');
     background-position: bottom;
@@ -89,9 +91,10 @@
   }
 
   .cta .heading-secondary {
-    font-size: 24px;
+    font-size: 1.8rem;
     margin-bottom: 3rem;
     color: #fffffe;
+    // text-transform: uppercase;
   }
 
   .cta .form-description {
@@ -135,10 +138,12 @@
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.142);
     margin-bottom: 1.5rem;
   }
-  .btn {
-    margin: 1rem 1rem 0 0;
-    padding: 1rem;
-  }
+  // .btn {
+  //   margin: 1rem 1rem 0 0;
+  //   padding: 1rem;
+  //   border-radius: 5px;
+  //   background-color: var(--clr-secondary-300);
+  // }
 
   @media (max-width: 59em) {
     .cta {
@@ -151,7 +156,7 @@
     }
 
     .cta-text-box {
-      padding: 4rem 4rem 5rem 4rem;
+      padding: 4rem 3rem 5rem 3rem;
       /* width: 385px; */
     }
 
@@ -194,7 +199,7 @@
       margin-bottom: 4rem;
     }
     .form-wrapper {
-      padding: 1rem 1.5rem;
+      padding: 1rem 1rem;
     }
   }
 </style>
