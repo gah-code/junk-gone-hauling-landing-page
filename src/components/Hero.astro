@@ -36,27 +36,27 @@ import Form from './Form.astro';
     outline: solid 3px #fdf2e9;
     padding: max(4rem, 15vh) 0;
     isolation: isolate;
+  }
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-image: linear-gradient(
-          180deg,
-          rgba(0, 17, 255, 0.978),
-          rgba(56, 100, 232, 0.872),
-          rgba(103, 126, 198, 0.559),
-          rgba(216, 219, 227, 0.283)
-        ),
-        url('/assets/image.jpeg');
-      opacity: 0.25; /* Set the desired opacity level here */
-      background-position: center;
-      background-size: cover;
-      z-index: -1;
-    }
+  .section-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 17, 255, 0.978),
+        rgba(56, 100, 232, 0.872),
+        rgba(103, 126, 198, 0.559),
+        rgba(216, 219, 227, 0.283)
+      ),
+      url('/assets/image.jpeg');
+    opacity: 0.25; /* Set the desired opacity level here */
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
   }
 
   .hero {
@@ -86,7 +86,7 @@ import Form from './Form.astro';
     }
 
     @media (max-width: 34em) {
-      padding: 1rem 1.5rem 2.5rem 1.5rem;
+      padding: 1rem 2.5rem 2.5rem 2.5rem;
       grid-template-columns: 1fr;
       gap: 1.2rem;
     }
