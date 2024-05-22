@@ -32,10 +32,11 @@ import Form from './Form.astro';
   .section-hero {
     min-height: 70vh;
     position: relative;
-    background-color: #343f61;
+    // background-color: #343f61;
     outline: solid 3px #fdf2e9;
     padding: max(5rem, 15vh) 0;
-    // isolation: isolate;
+    // background: transparent;
+    isolation: isolate;
   }
 
   .section-hero::before {
@@ -47,13 +48,13 @@ import Form from './Form.astro';
     bottom: 0;
     background-image: linear-gradient(
         180deg,
-        rgba(0, 17, 255, 0.978),
-        rgba(56, 100, 232, 0.872),
+        rgba(3, 10, 112, 0.978),
+        rgba(31, 71, 191, 0.739),
         rgba(103, 126, 198, 0.559),
         rgba(216, 219, 227, 0.283)
       ),
-      url('/public/image.jpeg');
-    opacity: 0.25; /* Set the desired opacity level here */
+      url('/image.jpeg');
+    opacity: 0.35; /* Set the desired opacity level here */
     background-position: center;
     background-size: cover;
     z-index: -1;
@@ -158,6 +159,7 @@ import Form from './Form.astro';
     border-radius: 10rem;
     cursor: pointer;
     transition: all 0.3s;
+    color: beige;
   }
 
   @media (max-width: 34em) {
