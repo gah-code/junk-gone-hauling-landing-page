@@ -43,7 +43,7 @@ import myImage from '../../assets/image.jpeg';
         eveniet consequatur odit quam quos possimus assumenda dicta fuga
         inventore ab.
       </p>
-      <button class='btn'>btn</button>
+      <!-- <button class='btn'>btn</button> -->
     </div>
     <Image class='features__img lazy-img' src={myImage} alt='Credit card' />
   </div>
@@ -52,7 +52,7 @@ import myImage from '../../assets/image.jpeg';
     @import '../styles/base/_color.scss';
 
     .about {
-      padding: 9rem 2rem;
+      padding: 9rem 5rem;
       border-top: 1px solid #f4f5cd;
       background-color: #efece0;
 
@@ -72,20 +72,11 @@ import myImage from '../../assets/image.jpeg';
       color: #000;
     }
     .features {
-      padding-top: 9rem;
-    }
-
-    @media (max-width: 34em) {
-      .section__title {
-        text-align: center;
-        width: 95%;
-      }
-    }
-    .features {
       display: grid;
+      padding-top: 9rem;
       grid-template-columns: 1fr 1fr;
-      column-gap: 2rem;
       row-gap: 12rem;
+      // column-gap: 2rem;
     }
 
     .features__img {
@@ -96,7 +87,7 @@ import myImage from '../../assets/image.jpeg';
     .features__feature {
       align-self: center;
       justify-self: center;
-      width: 75%;
+      width: 80%;
     }
 
     .features__icon {
@@ -118,9 +109,9 @@ import myImage from '../../assets/image.jpeg';
     }
 
     .features__header {
-      font-size: 3.3rem;
+      font-size: 3rem;
       font-weight: 700;
-      margin-bottom: 1.8rem;
+      margin-bottom: 2rem;
       line-height: 1.05;
 
       color: var(--clr-primary-100);
@@ -130,8 +121,24 @@ import myImage from '../../assets/image.jpeg';
       color: #131313;
       font-weight: 500;
       font-size: 1.6rem;
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
     }
+
+    @media (max-width: 34em) {
+      .about {
+        padding: 8rem 1rem;
+      }
+      .section__title {
+        text-align: center;
+        width: 95%;
+      }
+    }
+    // .features {
+    //   display: grid;
+    //   grid-template-columns: 1fr 1fr;
+    //   row-gap: 12rem;
+    // }
+
     @media (max-width: 44em) {
       section {
         padding: 6rem 1rem;

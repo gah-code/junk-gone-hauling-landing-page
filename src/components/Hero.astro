@@ -7,18 +7,23 @@ import Form from './Form.astro';
     <div class='hero-text-box'>
       <div class='header__title'>
         <h1>
-          LEAVE THE
+          PREMIER JUNK REMOVAL SERVICE
           <!-- highlight effect -->
-          <span class='highlight'>JUNK</span>
-          TO US <br />
+          <br />
           <span class='highlight'>SAN JOSE</span>
+          <!-- TO US <br /> -->
+
+          <!-- <span class='highlight'>SAN JOSE</span> -->
         </h1>
 
         <p>
           We are a full service junk removal company, providing you with all the
           services that you need to get rid of your junk on your terms.
         </p>
-        <p>We handle the heavy lifting, so you don't have to!</p>
+        <!-- <p>We handle the heavy lifting, so you don't have to!</p> -->
+        <p class='delivered-text'>
+          Over <span>100+</span> happy customers reviews!
+        </p>
         <button class='btn btn--text btn--scroll-to'
           >Learn more &DownArrow;</button
         >
@@ -97,6 +102,7 @@ import Form from './Form.astro';
 
   .header__title {
     flex: 1;
+    font-family: 'Teko', Sans-serif;
     display: grid;
     row-gap: 4.2rem;
     align-content: center;
@@ -116,7 +122,7 @@ import Form from './Form.astro';
   }
 
   .header__title p {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     font-weight: 400;
 
     &:nth-child(odd) {
@@ -129,20 +135,31 @@ import Form from './Form.astro';
   .highlight {
     position: relative;
     z-index: 1;
+    color: var(--clr-secondary-200);
 
-    &::after {
-      display: block;
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      z-index: -1;
-      opacity: 0.7;
-      transform: scale(1.07, 1.05) skewX(-15deg);
-      background-image: var(--gradient-primary);
-    }
+    // &::after {
+    //   display: block;
+    //   content: '';
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 0;
+    //   height: 100%;
+    //   width: 100%;
+    //   z-index: -1;
+    //   opacity: 0.7;
+    //   transform: scale(1.07, 1.05) skewX(-15deg);
+    //   background-image: var(--gradient-primary);
+    // }
+  }
+
+  .delivered-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  .delivered-text span {
+    color: var(--clr-secondary-200);
+    font-weight: 700;
   }
 
   .btn {
