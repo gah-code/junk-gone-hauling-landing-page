@@ -28,7 +28,7 @@ import { Image } from 'astro:assets';
     height: 9.8rem;
     width: 100%;
     padding: 0 4rem;
-    background-color: $color-primary;
+    background-color: $color-secondary;
     /* Because we want header to be sticky later */
     // height: 9.6rem;
     // padding: 0 4.8rem;
@@ -76,7 +76,7 @@ import { Image } from 'astro:assets';
   .nav__item {
     margin-left: 4rem;
     background-color: $color-primary;
-    border-radius: 2rem;
+    border-radius: 5px;
     border: solid 3px $color-secondary;
     font-size: 1.4rem;
   }
@@ -93,7 +93,7 @@ import { Image } from 'astro:assets';
   .nav__link--btn:link,
   .nav__link--btn:visited {
     // padding: 1.3rem 3.1rem;
-    padding: 0.85rem 4.2rem;
+    padding: 0.95rem 4.4rem;
     border-radius: 4rem;
     // background-color: var(--clr-primary-200);
     // border: solid 3px var(--clr-secondary-100);
@@ -121,15 +121,12 @@ import { Image } from 'astro:assets';
 
   @media (max-width: 34em) {
     .logo {
-      max-width: 125px;
+      max-width: 115px;
       height: auto;
     }
 
     .nav__item {
       margin-left: 2rem;
-      // background-color: $color-primary;
-      // border-radius: 2rem;
-      // border: solid 3px $color-secondary;
       font-size: 1.3rem;
     }
   }

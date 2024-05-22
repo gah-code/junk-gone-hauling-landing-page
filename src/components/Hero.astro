@@ -48,11 +48,11 @@ import Form from './Form.astro';
         180deg,
         rgba(3, 10, 112, 0.943),
         rgba(31, 71, 191, 0.67),
-        rgba(103, 127, 198, 0.59),
-        rgba(216, 219, 227, 0.159)
+        rgba(75, 86, 119, 0.832),
+        rgba(37, 82, 203, 0.789)
       ),
       url('/image.jpeg');
-    opacity: 0.35; /* Set the desired opacity level here */
+    opacity: 0.55; /* Set the desired opacity level here */
     background-position: center;
     background-size: cover;
     z-index: -1;
@@ -116,7 +116,7 @@ import Form from './Form.astro';
   }
 
   .header__title p {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     font-weight: 400;
 
     &:nth-child(odd) {
@@ -147,21 +147,23 @@ import Form from './Form.astro';
 
   .btn {
     display: inline-block;
-    background-color: black;
+    border: solid 4px var(--clr-secondary-200);
+    background: none;
     font-size: 1.6rem;
     font-family: inherit;
-    font-weight: 500;
-    border: none;
+    font-weight: 600;
+    // border: none;
     padding: 1.05rem 4rem;
-    border-radius: 10rem;
+    border-radius: 3px;
     cursor: pointer;
     transition: all 0.3s;
-    color: beige;
+    // color: beige;
+    color: #fff;
   }
 
   @media (max-width: 34em) {
     .hero {
-      padding: 3rem 1.5rem 3rem 1rem;
+      padding: 0.5rem 1rem 0 1.5rem;
       place-items: center stretch;
     }
   }

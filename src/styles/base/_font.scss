@@ -1,6 +1,6 @@
 :root {
   --fs-700: 6.5rem;
-  --fs-600: 5.35rem;
+  --fs-600: 5.65rem;
   --fs-500: 4.45rem;
   --fs-400: 3.5rem;
   --fs-300: 2.35rem;
@@ -21,8 +21,8 @@
 
 @media (min-width: 70em) {
   :root {
-    --fs-700: 6.5rem;
-    --fs-600: 5rem;
+    --fs-700: 6.8rem;
+    --fs-600: 5.5rem;
     --fs-500: 3.5rem;
     // --fs-400: 3.125rem;
     --fs-400: 3rem;
@@ -43,11 +43,11 @@ h1 {
   }
 
   @media (max-width: 44em) {
-    font-size: var(--fs-500);
+    font-size: var(--fs-600);
   }
 
   @media (max-width: 34em) {
-    font-size: var(--fs-500);
+    font-size: var(--fs-600);
 
   }
 }
@@ -116,7 +116,7 @@ body {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color-scheme: light dark;
+  // color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   // background-color: #343f61;
   font-synthesis: none;
