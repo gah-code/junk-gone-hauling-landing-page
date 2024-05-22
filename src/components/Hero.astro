@@ -34,8 +34,7 @@ import Form from './Form.astro';
     position: relative;
     background-color: #343f61;
     outline: solid 3px #fdf2e9;
-    padding: max(4rem, 15vh) 3rem;
-    overflow: hidden;
+    padding: max(4rem, 15vh) 0;
     // isolation: isolate;
   }
 
@@ -61,7 +60,7 @@ import Form from './Form.astro';
   }
 
   .hero {
-    max-width: 130rem;
+    max-width: 120rem;
     margin: 0 auto;
     padding: 2rem 5rem;
     display: grid;
@@ -159,5 +158,15 @@ import Form from './Form.astro';
     border-radius: 10rem;
     cursor: pointer;
     transition: all 0.3s;
+  }
+
+  @media (max-width: 34em) {
+
+  .section-hero {
+    padding: 2.4rem 0 6.4rem 0;
+  }
+
+  .hero {
+    padding: 0 3.2rem;
   }
 </style>
