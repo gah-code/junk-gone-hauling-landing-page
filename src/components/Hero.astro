@@ -61,11 +61,13 @@ import Form from './Form.astro';
 
   .hero {
     max-width: 130rem;
+
     margin: 0 auto;
     padding: 2rem 8rem;
     display: grid;
     // grid-template-columns: minmax(300px, 1fr) minmax(350px, 1fr);
     grid-template-columns: minmax(300px, 0.9fr) minmax(330px, 1.1fr);
+    // grid-template-columns: 1fr 1fr;
 
     gap: 2rem;
     place-items: center;
@@ -73,6 +75,8 @@ import Form from './Form.astro';
     @media (max-width: 59em) {
       padding: 1rem 0.5rem;
       grid-template-columns: minmax(300px, 1fr) minmax(200px, 1fr);
+      // grid-template-columns: 1fr;
+
       gap: 0;
     }
 
