@@ -32,10 +32,8 @@ import Form from './Form.astro';
   .section-hero {
     min-height: 70vh;
     position: relative;
-    // background-color: #343f61;
     outline: solid 3px #fdf2e9;
     padding: max(5rem, 15vh) 0;
-    // background: transparent;
     isolation: isolate;
   }
 
@@ -48,10 +46,10 @@ import Form from './Form.astro';
     bottom: 0;
     background-image: linear-gradient(
         180deg,
-        rgba(3, 10, 112, 0.978),
-        rgba(31, 71, 191, 0.739),
-        rgba(103, 126, 198, 0.559),
-        rgba(216, 219, 227, 0.283)
+        rgba(3, 10, 112, 0.943),
+        rgba(31, 71, 191, 0.67),
+        rgba(103, 127, 198, 0.59),
+        rgba(216, 219, 227, 0.159)
       ),
       url('/image.jpeg');
     opacity: 0.35; /* Set the desired opacity level here */
@@ -66,9 +64,6 @@ import Form from './Form.astro';
     padding: 2rem 5rem;
     display: grid;
     grid-template-columns: minmax(300px, 1fr) minmax(350px, 1fr);
-    // grid-template-columns: minmax(300px, 0.9fr) minmax(330px, 1.1fr);
-    // grid-template-columns: 1fr 1fr;
-
     gap: 2rem;
     place-items: center;
 
@@ -77,19 +72,20 @@ import Form from './Form.astro';
       grid-template-columns: minmax(300px, 1fr) minmax(200px, 1fr);
       // grid-template-columns: 1fr;
 
-      gap: 1rem;
+      gap: 2rem;
     }
 
     @media (max-width: 44em) {
       padding: 1rem 2.5rem 3rem 2.5rem;
       grid-template-columns: 1fr;
-      gap: 1.5rem;
+      gap: 8rem;
+      border: soild 3px #f4f4f4;
     }
 
     @media (max-width: 34em) {
       padding: 1rem 2.5rem 2.5rem 2.5rem;
       grid-template-columns: 1fr;
-      gap: 1.2rem;
+      gap: 5rem;
     }
   }
 
@@ -163,12 +159,8 @@ import Form from './Form.astro';
   }
 
   @media (max-width: 34em) {
-    .section-hero {
-      padding: 2.4rem 0 6.4rem 0;
-    }
-
     .hero {
-      padding: 3rem 2rem;
+      padding: 3.8rem 1.8rem;
     }
   }
 </style>

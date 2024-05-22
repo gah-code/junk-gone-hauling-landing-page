@@ -1,7 +1,7 @@
 :root {
   --fs-700: 6.5rem;
-  --fs-600: 5.65rem;
-  --fs-500: 4.15rem;
+  --fs-600: 5.35rem;
+  --fs-500: 4.25rem;
   --fs-400: 3.8rem;
   --fs-300: 2.35rem;
   --fs-200: 1.6rem;
@@ -47,7 +47,7 @@ h1 {
   }
 
   @media (max-width: 34em) {
-    font-size: var(--fs-600);
+    font-size: var(--fs-500);
 
   }
 }
