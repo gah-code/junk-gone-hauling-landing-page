@@ -45,9 +45,4 @@
   --text-font-size: 1.8rem;
   --main-font-color: #333;
 
-  // @each $color, $shades in $colors {
-  //   @each $shade, $value in $shades {
-  //     --#{$color}-#{$shade}: #{$value};
-  //   }
-  // }
 }
