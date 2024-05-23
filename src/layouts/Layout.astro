@@ -3,41 +3,142 @@ import '../styles/global.scss';
 
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-// import Grid from '../components/Grid.astro';
 
-// const { title } = Astro.props;
+const { title, description, keywords, url, image, videoUrl, videoType } =
+  Astro.props;
 ---
 
+<!doctype html>
 <html lang='en'>
-  <head
-    ><meta charset='utf-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <meta http-equiv='X-UA-Compatible' content='ie=edge' />
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <!-- <meta name='robots' content='index, follow' /> -->
+    <meta name='author' content='junk gone hauling and junk removal services' />
+
+    <title>
+      {
+        title ||
+          'Bay Area Junk Removal Services - San Jose, CA | Fast & Eco-Friendly'
+      }
+    </title>
+    <meta
+      name='description'
+      content={description ||
+        'Reliable junk removal services in San Jose, CA, and the Bay Area. We offer fast, eco-friendly solutions for residential and commercial clients. Get a free quote today and let us handle your clutter!'}
+    />
+    <meta
+      name='keywords'
+      content={keywords ||
+        'junk removal, San Jose junk removal, Bay Area junk removal, junk hauling, waste removal, trash removal, eco-friendly junk removal, residential junk removal, commercial junk removal, San Jose CA, Bay Area, garbage removal'}
+    />
+    <!-- <link
+      rel='canonical'
+      href={url || 'https://www.yourwebsite.com/junk-removal-san-jose'}
+    /> -->
+
+    <!-- Open Graph Tags -->
+    <meta
+      property='og:title'
+      content={title ||
+        'Bay Area Junk Removal Services - San Jose, CA | Fast & Eco-Friendly'}
+    />
+    <meta
+      property='og:description'
+      content={description ||
+        'Reliable junk removal services in San Jose, CA, and the Bay Area. We offer fast, eco-friendly solutions for residential and commercial clients. Get a free quote today and let us handle your clutter!'}
+    />
+    <meta
+      property='og:url'
+      content={url || 'https://www.yourwebsite.com/junk-removal-san-jose'}
+    />
+    <meta property='og:type' content='website' />
+    <meta
+      property='og:image'
+      content={image ||
+        'https://www.yourwebsite.com/images/junk-removal-service.jpg'}
+    />
+
+    <!-- Twitter Card Tags -->
+    <meta name='twitter:card' content='summary_large_image' />
+    <meta
+      name='twitter:title'
+      content={title ||
+        'Bay Area Junk Removal Services - San Jose, CA | Fast & Eco-Friendly'}
+    />
+    <meta
+      name='twitter:description'
+      content={description ||
+        'Reliable junk removal services in San Jose, CA, and the Bay Area. We offer fast, eco-friendly solutions for residential and commercial clients. Get a free quote today and let us handle your clutter!'}
+    />
+    <meta
+      name='twitter:image'
+      content={image ||
+        'https://www.yourwebsite.com/images/junk-removal-service.jpg'}
+    />
+    <!-- YouTube Video Tags -->
+    <meta
+      property='og:video'
+      content={videoUrl || 'https://www.youtube.com/embed/dQw4w9WgXcQ'}
+    />
+    <meta property='og:video:type' content={videoType || 'text/html'} />
+    <meta
+      property='og:video:url'
+      content={videoUrl || 'https://www.youtube.com/embed/dQw4w9WgXcQ'}
+    />
+    <meta
+      property='og:video:secure_url'
+      content={videoUrl || 'https://www.youtube.com/embed/dQw4w9WgXcQ'}
+    />
+
+    <link rel='icon' href='favicon.png' />
+    <link rel='apple-touch-icon' href='apple-touch-icon.png' />
+
     <meta name='generator' content={Astro.generator} />
   </head>
   <body>
     <Header />
-    <!-- <h1>{pageTitle}</h1> -->
     <slot />
     <Footer />
-    <script
-      type='module'
-      src='https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js'
-    ></script>
-    <script
-      nomodule
-      src='https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js'
-    ></script>
-    <script
-      type='module'
-      src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'
-    ></script>
-    <script
-      nomodule
-      src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'></script>
-    <!-- <style lang="scss" is:global></style> -->
   </body>
+  <script
+    type='module'
+    src='https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js'
+  ></script>
+  <script
+    nomodule
+    src='https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js'
+  ></script>
+  <script
+    type='module'
+    src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'
+  ></script>
+  <script
+    nomodule
+    src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'></script>
 </html>
-<style lang='scss'>
-  @import '../styles/global.scss'; // .hero {
-</style>
+
+<!-- <link
+      rel='canonical'
+      href='https://www.yourwebsite.com/junk-removal-san-jose'
+    />
+    <meta name='robots' content='index, follow' />
+  <meta name="author" content="Your Company Name"/> -->
+<!-- <meta
+      property='og:title'
+      content='Bay Area Junk Removal Services - San Jose, CA | Fast & Eco-Friendly'
+    />
+    <meta
+      property='og:description'
+      content='Reliable junk removal services in San Jose, CA, and the Bay Area. We offer fast, eco-friendly solutions for residential and commercial clients. Get a free quote today and let us handle your clutter!'
+    />
+    <meta
+      property='og:url'
+      content='https://www.yourwebsite.com/junk-removal-san-jose'
+    />
+    <meta property='og:type' content='website' />
+    <meta
+      property='og:image'
+      content='https://www.yourwebsite.com/images/junk-removal-service.jpg'
+    /> -->

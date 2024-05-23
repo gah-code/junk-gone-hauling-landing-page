@@ -4,9 +4,20 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Steps from '../components/Steps.astro';
 import About from '../components/About.astro';
+
+// Define SEO metadata
+const title =
+  'Bay Area Junk Removal Services - San Jose, CA | Fast & Eco-Friendly';
+const description =
+  'Reliable junk removal services in San Jose, CA, and the Bay Area. We offer fast, eco-friendly solutions for residential and commercial clients. Get a free quote today and let us handle your clutter!';
+const keywords =
+  'junk removal, San Jose junk removal, Bay Area junk removal, junk hauling, waste removal, trash removal, eco-friendly junk removal, residential junk removal, commercial junk removal, San Jose CA, Bay Area, garbage removal';
+const url = 'https://www.yourwebsite.com/junk-removal-san-jose';
+const videoUrl = 'https://www.youtube.com/@JunkGone408';
+const videoType = 'text/html';
 ---
 
-<Layout title='Welcome to Astro.'>
+<Layout {title} {description} {keywords} {url} {videoUrl} {videoType}>
   <GlobalStyles />
   <main>
     <Hero />
@@ -24,19 +35,22 @@ import About from '../components/About.astro';
     <Steps />
   </main>
 </Layout>
+
 <style lang='scss'>
   main {
-    /* background-color: rgb(46, 46, 159); */
-
     &:nth-child(even) {
       background-color: rgba(23, 34, 113, 0.94);
-      /* border: solid 4px var(--clr-secondary-100); */
     }
   }
 
   .section__title {
     width: 70%;
-    margin: 8rem auto 8rem auto;
+    margin: 8rem auto;
+
+    @media (max-width: 34em) {
+      text-align: center;
+      width: 90%;
+    }
   }
 
   .section__description {
@@ -45,13 +59,6 @@ import About from '../components/About.astro';
 
   .section__header {
     color: var(--clr-secondary-100);
-    padding: 0rem;
-  }
-
-  @media (max-width: 34em) {
-    .section__title {
-      text-align: center;
-      width: 90%;
-    }
+    padding: 0;
   }
 </style>
