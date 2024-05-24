@@ -79,9 +79,11 @@ import { Image } from 'astro:assets';
 </footer>
 
 <style lang='scss' is:global>
+  @import '../styles/base/_color.scss';
+
   .footer {
     padding: 9.8rem 2rem;
-    border-top: 4px solid #164ee6;
+    border-top: 4px solid $color-primary-300;
     background-color: var(--clr-grey-600);
   }
 
@@ -122,7 +124,6 @@ import { Image } from 'astro:assets';
     font-size: 1.4rem;
     line-height: 1.6;
     color: var(--clr-grey-100);
-    /* margin-top: 4rem; */
     font-weight: 500;
   }
 

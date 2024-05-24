@@ -66,27 +66,22 @@
   @import '../styles/base/_color.scss';
 
   .form-wrapper {
-    /* background-image: url('https://assets.codepen.io/308367/mountain-with-stars.jpg');
-    background-position: bottom;
-    background-size: cover;
-    min-height: 70vh;
-    position: relative; */
-    /* display: grid; */
-    /* z-index: 2; */
   }
   .cta {
     display: grid;
     // box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.139);
     border-radius: 5px;
     overflow: hidden;
-    // border: solid 1px var(--clr-secondary-500);
-    // background-color: $clr-blue-400;
     z-index: 1;
   }
 
   .btn--form {
-    background-color: var(--clr-secondary-200);
+    color: #fff;
+    background-color: var(--clr-primary-200);
     margin: 1rem 0;
+    font-size: 2rem;
+    font-weight: 500;
+    border-radius: 2px;
   }
 
   .cta-text-box {
@@ -95,12 +90,7 @@
   }
 
   .cta .heading-secondary {
-    // font-size: 2rem;
-    // margin: 0 0 2rem 0.9rem;
     color: #f4f4f4;
-    // letter-spacing: 1.3px;
-    // text-transform: uppercase;
-    // color: var(--clr-secondary-300);
   }
 
   .cta .form-description {
@@ -125,25 +115,34 @@
     row-gap: 1.5rem;
     z-index: 1;
   }
+
+  .cta-form input,
+  .cta-form select {
+    width: 100%;
+    padding: 1.2rem 2rem;
+    font-size: 1.8rem;
+    font-family: inherit;
+    color: inherit;
+    border: solid 4px #222;
+    background-color: inherit;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.142);
+    margin-bottom: 1rem;
+    transition: 180ms box-shadow ease-in-out;
+  }
+
   .cta-form label {
     display: block;
     font-size: 1.2rem;
     font-weight: 500;
     /* margin-bottom: 1.2rem; */
   }
-  .cta-form input,
-  .cta-form select {
-    width: 100%;
-    padding: 1rem 2rem;
-    font-size: 1.8rem;
-    font-family: inherit;
-    color: inherit;
-    border: solid 4px #222;
-    background-color: inherit;
-    border-radius: 9px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.142);
-    margin-bottom: 1.5rem;
+
+  .cta-form input:focus {
+    box-shadow: 0 0 0 3px;
+    outline: 3px solid transparent;
   }
+
   // .btn {
   //   margin: 1rem 1rem 0 0;
   //   padding: 1rem;

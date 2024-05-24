@@ -1,6 +1,6 @@
 :root {
   --fs-700: 4.5rem;
-  --fs-600: 4rem;
+  --fs-600: 3.45rem;
   --fs-500: 3.65rem;
   --fs-400: 3.5rem;
   --fs-300: 2.35rem;
@@ -21,13 +21,13 @@
 
 @media (min-width: 70em) {
   :root {
-    --fs-700: 5rem;
-    --fs-600: 4.55rem;
+    --fs-700: 5.5rem;
+    --fs-600: 4.85rem;
     --fs-500: 4rem;
     // --fs-400: 3.125rem;
     --fs-400: 3rem;
     --fs-300: 1.9725rem;
-    --fs-text: 1.5rem;
+    --fs-text: 1.9rem;
 
 
   }
@@ -114,11 +114,7 @@ p {
   font-style: normal;
   line-height: 1.7;
   font-weight: 500;
-  color: #222;
-
-  // font-style: normal;
-  // color: brown;
-
+  color: #121212;
 }
 
 body {

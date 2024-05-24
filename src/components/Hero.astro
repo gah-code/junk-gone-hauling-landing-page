@@ -39,32 +39,10 @@ import Form from './Form.astro';
   .section-hero {
     min-height: 70vh;
     position: relative;
-    // outline: solid 3px #fdf2e9;
     padding: max(5rem, 15vh) 0;
     isolation: isolate;
     background-color: #fbf8cd;
   }
-
-  // .section-hero::before {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   background-image: linear-gradient(
-  //       180deg,
-  //       rgba(3, 10, 112, 0.943),
-  //       rgba(31, 71, 191, 0.67),
-  //       rgba(75, 86, 119, 0.832),
-  //       rgba(37, 82, 203, 0.789)
-  //     ),
-  //     url('/image.jpeg');
-  //   opacity: 0.55;
-  //   background-position: center;
-  //   background-size: cover;
-  //   z-index: -1;
-  // }
 
   .hero {
     max-width: 120rem;
@@ -72,9 +50,8 @@ import Form from './Form.astro';
     padding: 2rem 5rem;
     display: grid;
     grid-template-columns: minmax(300px, 1fr) minmax(350px, 1fr);
-    column-gap: 8rem;
-    place-items: center;
-
+    column-gap: 2.8rem;
+    // place-items: center;
     @media (max-width: 59em) {
       padding: 1rem 2.5rem;
       grid-template-columns: minmax(350px, 1fr) minmax(200px, 1fr);
@@ -100,13 +77,10 @@ import Form from './Form.astro';
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 1;
   }
 
   .header__title {
     flex: 1;
-
-    // font-family: 'Teko', Sans-serif;
     display: grid;
     row-gap: 4.2rem;
     align-content: center;
@@ -122,15 +96,13 @@ import Form from './Form.astro';
     }
 
     @media (max-width: 34em) {
-      row-gap: 3.5rem;
+      row-gap: 2.5rem;
       margin-bottom: 4.5rem;
+      // padding: 0 1.8rem;
     }
   }
 
   .header__title p {
-    // font-size: 1.8rem;
-    // font-weight: 400;
-
     &:nth-child(odd) {
       font-weight: 700;
       font-size: 2rem;
@@ -141,8 +113,10 @@ import Form from './Form.astro';
   .highlight {
     position: relative;
     z-index: 1;
-    color: var(--clr-secondary-200);
-    // background-color: var(--clr-primary-500);
+    // color: var(--clr-primary-400);
+    background-clip: text;
+    color: transparent;
+    background-image: $gradient;
 
     // &::after {
     //   display: block;
@@ -161,11 +135,12 @@ import Form from './Form.astro';
 
   .delivered-text {
     font-size: 1.8rem;
-    font-weight: 600;
+    font-weight: 700;
   }
 
   .delivered-text span {
-    color: var(--clr-secondary-200);
+    font-size: 2.8rem;
+    color: var(--clr-primary-100);
     font-weight: 700;
   }
 
@@ -188,8 +163,9 @@ import Form from './Form.astro';
 
   @media (max-width: 34em) {
     .hero {
-      padding: 0.5rem 0.5rem 0 0.5rem;
+      padding: 0 1.5rem 0 1.5rem;
       place-items: center stretch;
+      gap: 1rem;
     }
   }
 </style>

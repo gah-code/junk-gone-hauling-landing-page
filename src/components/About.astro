@@ -52,10 +52,9 @@ import myImage from '../../assets/image.jpeg';
     @import '../styles/base/_color.scss';
 
     .about {
-      padding: 9rem 5rem;
+      padding: 9rem 8rem;
       border-top: 1px solid #f4f5cd;
       background-color: #efece0;
-
       transition:
         transform 1s,
         opacity 1s;
@@ -64,9 +63,8 @@ import myImage from '../../assets/image.jpeg';
     .section__title {
       width: 80%;
       margin: 0 auto;
-      // text-align: center;
-      color: darkslategray;
-      // padding: 0 0 8rem 0;
+
+      // color: darkslategray;
     }
     .section__description {
       color: #000;
@@ -76,7 +74,6 @@ import myImage from '../../assets/image.jpeg';
       padding-top: 9rem;
       grid-template-columns: 1fr 1fr;
       row-gap: 12rem;
-      // column-gap: 2rem;
     }
 
     .features__img {
@@ -133,19 +130,12 @@ import myImage from '../../assets/image.jpeg';
         width: 95%;
       }
     }
-    // .features {
-    //   display: grid;
-    //   grid-template-columns: 1fr 1fr;
-    //   row-gap: 12rem;
-    // }
-
     @media (max-width: 44em) {
       section {
         padding: 6rem 1rem;
         border-top: 1px solid #ddd;
       }
       .features {
-        // display: grid;
         grid-template-columns: 1fr;
         row-gap: 6.5rem;
         margin: 5rem 0;
