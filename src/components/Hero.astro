@@ -7,7 +7,7 @@ import Form from './Form.astro';
     <div class='hero-text-box'>
       <div class='header__title'>
         <h1>
-          PREMIER JUNK REMOVAL SERVICE
+          PREMIER <span class='highlight'>JUNK</span> REMOVAL SERVICE
           <!-- highlight effect -->
           <br />
           <span class='highlight'>SAN JOSE</span>
@@ -76,8 +76,8 @@ import Form from './Form.astro';
     place-items: center;
 
     @media (max-width: 59em) {
-      padding: 1rem 5.5rem;
-      grid-template-columns: minmax(300px, 1fr) minmax(200px, 1fr);
+      padding: 1rem 2.5rem;
+      grid-template-columns: minmax(350px, 1fr) minmax(200px, 1fr);
       // grid-template-columns: 1fr;
       gap: 2rem;
     }
@@ -113,7 +113,7 @@ import Form from './Form.astro';
     justify-content: center;
     align-items: start;
     justify-items: start;
-    color: $color-primary-100;
+    color: $color-primary-200;
 
     @media (max-width: 59em) {
       padding: 0 2rem;
@@ -128,13 +128,13 @@ import Form from './Form.astro';
   }
 
   .header__title p {
-    font-size: 1.8rem;
+    // font-size: 1.8rem;
     // font-weight: 400;
 
     &:nth-child(odd) {
-      font-weight: 600;
+      font-weight: 700;
       font-size: 2rem;
-      padding-bottom: 1rem;
+      padding-bottom: 3rem;
     }
   }
 
@@ -142,6 +142,7 @@ import Form from './Form.astro';
     position: relative;
     z-index: 1;
     color: var(--clr-secondary-200);
+    // background-color: var(--clr-primary-500);
 
     // &::after {
     //   display: block;
@@ -170,14 +171,15 @@ import Form from './Form.astro';
 
   .btn {
     display: inline-block;
-    border: solid 4px var(--clr-secondary-200);
+    border: solid 4px var(--clr-secondary-300);
     background: none;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-family: inherit;
     font-weight: 600;
+    background-color: $color-primary-400;
     // border: none;
-    padding: 1.05rem 4rem;
-    border-radius: 3px;
+    padding: 1.25rem 4.2rem;
+    border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s;
     // color: beige;
