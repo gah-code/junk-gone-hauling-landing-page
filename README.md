@@ -37,10 +37,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
 astro icon
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8ea54844-07ce-4d49-9ce6-e68e6f53f64a/deploy-status)](https://app.netlify.com/sites/junkgonehaulinglandingpagesj/deploys)
