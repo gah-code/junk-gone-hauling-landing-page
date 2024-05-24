@@ -3,8 +3,14 @@
 /// Design systems and theming
 /// 
 $color-primary: #1D2486;
-$color-primary-light: #7ed56f;
-$color-primary-dark: #28b485;
+$color-primary-100: #1a2079;
+$color-primary-200: #171d6b;
+$color-primary-300: #14195e;
+$color-primary-400: #111650;
+
+
+$color-primary-light: #6166aa;
+$color-primary-dark: #0c0e36;
 
 
 $color-secondary: hsl(57, 95%, 47%);
@@ -34,3 +40,21 @@ $global-color-08fcc9d: #787878;
 $global-color-e5e9561: #292929;
 $global-color-f06adda: #111111;
 $global-color-cc33451: #202894;
+
+$clr-bg: #d2d3e7;
+
+
+$clr-blue: #e9f2ff;
+$clr-blue-100: #d7e8ff;
+$clr-blue-200: #b7d4ff;
+$clr-blue-300: #8cb6ff;
+$clr-blue-400: #5f8aff;
+$clr-blue-500: #3b5eff;
+$clr-blue-600: #192fff;
+
+$clr-yellow: #fdfee8;
+$clr-yellow-100: #fbffc2;
+$clr-yellow-200: #faff87;
+$clr-yellow-300: #feff43;
+$clr-yellow-400: #fff305;
+$clr-yellow-500: #efda03;
