@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Steps from '../components/Steps.astro';
 import About from '../components/About.astro';
+import Services from '../components/Services.astro';
 
 // Define SEO metadata
 const title =
@@ -21,12 +22,15 @@ const videoType = 'text/html';
   <GlobalStyles />
   <main>
     <Hero />
+    <Services />
+
     <div class='section__title'>
       <h4 class='section__description'>LEAVE THE JUNK TO US!</h4>
       <h2 class='section__header'>
         Everything you need in a junk removal service
       </h2>
     </div>
+
     <About />
     <div class='section__title'>
       <h4 class='section__description'>TRASH REMOVAL MADE SIMPLE</h4>
