@@ -6,7 +6,7 @@ import Form from './Form.astro';
   <div class='hero'>
     <div class='hero-text-box'>
       <div class='header__title'>
-        <h1>
+        <h1 class='heading-primary'>
           PREMIER <span class='highlight'>JUNK</span> REMOVAL SERVICE
           <!-- highlight effect -->
           <br />
@@ -16,17 +16,30 @@ import Form from './Form.astro';
           <!-- <span class='highlight'>SAN JOSE</span> -->
         </h1>
 
-        <p>
+        <p class='hero-description'>
           We are a full service junk removal company, providing you with all the
           services that you need to get rid of your junk on your terms.
         </p>
+        <div class='delivered-meals'>
+          <div class='delivered-imgs'>
+            <img src='/assets/image.jpeg' alt='Customer photo' />
+            <img src='/assets/image.jpeg' alt='Customer photo' />
+            <img src='img/customers/customer-3.jpg' alt='Customer photo' />
+            <img src='img/customers/customer-4.jpg' alt='Customer photo' />
+            <img src='img/customers/customer-5.jpg' alt='Customer photo' />
+            <img src='img/customers/customer-6.jpg' alt='Customer photo' />
+          </div>
+          <p class='delivered-text'>
+            <span>200+</span>clean up last year!
+          </p>
+        </div>
         <!-- <p>We handle the heavy lifting, so you don't have to!</p> -->
-        <p class='delivered-text'>
+        <!-- <p class='delivered-text'>
           Over <span>100+</span> happy customers reviews!
-        </p>
-        <button class='btn btn--text btn--scroll-to'
+        </p> -->
+        <!-- <button class='btn btn--text btn--scroll-to'
           >CALL NOW &DownArrow;</button
-        >
+        > -->
       </div>
     </div>
     <Form />
@@ -39,18 +52,22 @@ import Form from './Form.astro';
   .section-hero {
     min-height: 70vh;
     position: relative;
-    padding: max(5rem, 15vh) 0;
+    // padding: max(5rem, 15vh) 0;
+    padding: 4.8rem 0 9.6rem 0;
+
     isolation: isolate;
     background-color: #fbf8cd;
   }
 
   .hero {
-    max-width: 120rem;
+    max-width: 130rem;
     margin: 0 auto;
-    padding: 2rem 5rem;
+    padding: 2rem 3rem;
     display: grid;
-    grid-template-columns: minmax(310px, 1fr) minmax(340px, 1fr);
-    column-gap: 2.8rem;
+    grid-template-columns: minmax(320px, 1fr) minmax(330px, 1fr);
+    gap: 2rem;
+    align-items: center;
+
     // place-items: start;
     @media (max-width: 59em) {
       padding: 1rem 1.5rem;
@@ -60,7 +77,7 @@ import Form from './Form.astro';
     }
 
     @media (max-width: 44em) {
-      padding: 1rem 2.5rem 3rem 2.5rem;
+      padding: 1rem 1rem 3rem 1rem;
       grid-template-columns: 1fr;
       gap: 8rem;
       border: soild 3px #f4f4f4;
@@ -73,6 +90,12 @@ import Form from './Form.astro';
     }
   }
 
+  .hero-description {
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 4.5rem;
+  }
+
   .hero-text-box {
     display: flex;
     flex-direction: column;
@@ -81,34 +104,27 @@ import Form from './Form.astro';
 
   .header__title {
     flex: 1;
-    display: grid;
-    row-gap: 4.2rem;
-    align-content: center;
-    justify-content: center;
-    align-items: start;
-    justify-items: start;
-    color: $color-primary-200;
 
     @media (max-width: 59em) {
-      padding: 0 2rem;
-      row-gap: 2.5rem;
-      column-gap: 3rem;
+      padding: 0 1.5rem;
+      // row-gap: 2.5rem;
+      // column-gap: 3rem;
     }
 
     @media (max-width: 34em) {
-      row-gap: 2.5rem;
-      margin-bottom: 4.5rem;
+      row-gap: 2rem;
+      margin-bottom: 3rem;
       // padding: 0 1.8rem;
     }
   }
 
-  .header__title p {
-    &:nth-child(odd) {
-      font-weight: 700;
-      font-size: 2rem;
-      padding-bottom: 3rem;
-    }
-  }
+  // .header__title p {
+  //   &:nth-child(odd) {
+  //     font-weight: 700;
+  //     font-size: 2rem;
+  //     padding-bottom: 3rem;
+  //   }
+  // }
 
   .highlight {
     position: relative;
@@ -133,14 +149,36 @@ import Form from './Form.astro';
     // }
   }
 
+  .delivered-meals {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    margin-top: 6rem;
+  }
+
+  .delivered-imgs {
+    display: flex;
+  }
+
+  .delivered-imgs img {
+    height: 4.8rem;
+    width: 4.8rem;
+    border-radius: 50%;
+    margin-right: -1.6rem;
+    border: 3px solid #fdf2e9;
+  }
+
+  .delivered-imgs img:last-child {
+    margin: 0;
+  }
+
   .delivered-text {
     font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .delivered-text span {
-    font-size: 2.2rem;
-    color: var(--clr-primary-100);
+    color: #cf711f;
     font-weight: 700;
   }
 

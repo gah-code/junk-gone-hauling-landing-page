@@ -1,84 +1,85 @@
-:root {
-  --fs-700: 3.85rem;
-  --fs-600: 3.35rem;
-  --fs-500: 3.65rem;
-  --fs-400: 3.5rem;
-  --fs-300: 2.35rem;
-  --fs-200: 1.6rem;
+// :root {
+//   --fs-700: 3.85rem;
+//   --fs-600: 3.25rem;
+//   --fs-500: 3.15rem;
+//   --fs-400: 3.5rem;
+//   --fs-300: 2.35rem;
+//   --fs-200: 1.6rem;
 
-  --fs-text: 1.55rem;
+//   --fs-text: 1.55rem;
 
-  --clr-bg: white;
-  --clr-text: black;
-}
+//   --clr-bg: white;
+//   --clr-text: black;
+// }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --clr-bg: black;
-    --clr-text: white;
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --clr-bg: black;
+//     --clr-text: white;
+//   }
+// }
 
-@media (min-width: 70em) {
-  :root {
-    --fs-700: 4.5rem;
-    --fs-600: 4.25rem;
-    --fs-500: 4rem;
-    // --fs-400: 3.125rem;
-    --fs-400: 3rem;
-    --fs-300: 1.9725rem;
-    --fs-text: 1.6rem;
-
-
-  }
-}
-
-h1 {
-  font-size: var(--fs-700);
-  line-height: 0.9;
-  // font-weight: 800;
-  // font-family: "Roboto", sans-serif;
-  font-family: "Rubik", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-
-  @media (max-width: 59em) {
-    font-size: var(--fs-700);
-  }
-
-  @media (max-width: 44em) {
-    font-size: var(--fs-600);
-  }
-
-  @media (max-width: 34em) {
-    font-size: var(--fs-600);
-
-  }
-}
+// @media (min-width: 70em) {
+//   :root {
+//     --fs-700: 4rem;
+//     --fs-600: 4.25rem;
+//     --fs-500: 3.45rem;
+//     // --fs-400: 3.125rem;
+//     --fs-400: 3rem;
+//     --fs-300: 1.9725rem;
+//     --fs-text: 1.6rem;
 
 
+//   }
+// }
 
-h2 {
-  font-family: Merriweather, sans-serif;
-  font-size: var(--fs-600);
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -1.2px;
-  margin-bottom: 1.8rem;
-  color: var(--clr-bg);
+// h1 {
+//   font-size: var(--fs-700);
+//   line-height: 0.9;
+//   // font-weight: 800;
+//   // font-family: "Roboto", sans-serif;
+//   font-family: "Rubik", sans-serif;
+//   font-weight: 900;
+//   font-style: normal;
 
-  // line-height: 1.3;
+//   @media (max-width: 59em) {
+//     font-size: var(--fs-700);
+//   }
+
+//   @media (max-width: 44em) {
+//     font-size: var(--fs-600);
+//   }
+
+//   @media (max-width: 34em) {
+//     font-size: var(--fs-600);
+
+//   }
+// }
 
 
-  @media (max-width: 59em) {
-    font-size: var(--fs-500);
-  }
+
+// h2 {
+//   font-family: Merriweather, sans-serif;
+//   font-size: var(--fs-600);
+//   font-weight: 700;
+//   // line-height: 2.5rem;
+//   letter-spacing: -1.2px;
+//   // margin-bottom: 1.4rem;
+//   color: var(--clr-bg);
 
 
-  @media (max-width: 44em) {
-    font-size: var(--fs-400);
-  }
-}
+//   line-height: 1.3;
+
+
+//   @media (max-width: 59em) {
+//     font-size: var(--fs-500);
+//   }
+
+
+//   @media (max-width: 44em) {
+//     font-size: var(--fs-500);
+//   }
+// }
 
 // .text-4xl h2 {
 //   font-size: 2.25rem;
@@ -86,54 +87,75 @@ h2 {
 //   font-family: Merriweather, sans-serif;
 // }
 
-h3 {
-  font-size: var(--fs-500);
-  font-weight: 500;
-  text-transform: uppercase;
-  color: rgb(255, 251, 0);
-  margin-bottom: 1rem;
+// h3 {
+//   font-size: var(--fs-500);
+//   font-weight: 500;
+//   text-transform: uppercase;
+//   color: rgb(255, 251, 0);
+//   margin-bottom: 1rem;
 
-  @media (max-width: 59em) {
-    margin-bottom: 0.5rem;
-    font-size: var(--fs-300);
-  }
+//   @media (max-width: 59em) {
+//     margin-bottom: 0.5rem;
+//     font-size: var(--fs-300);
+//   }
+// }
+
+// h4 {
+//   font-size: var(--fs-300);
+//   font-weight: 500;
+//   text-transform: uppercase;
+//   color: #f8f7f7;
+//   margin-bottom: 1rem;
+//   // letter-spacing: 1px;
+
+//   @media (max-width: 59em) {
+//     margin-bottom: 0.5rem;
+//     font-size: var(--fs-200);
+//   }
+
+//   @media (max-width: 34em) {
+//     margin-bottom: 0.8rem;
+//     font-size: var(--fs-200);
+//   }
+// }
+
+// p {
+//   font-size: var(--fs-text);
+//   font-style: normal;
+//   line-height: 1.7;
+//   font-weight: 500;
+//   color: #121212;
+// }
+
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-h4 {
-  font-size: var(--fs-300);
-  font-weight: 500;
-  text-transform: uppercase;
-  color: #f8f7f7;
-  margin-bottom: 1rem;
-  // letter-spacing: 1px;
+html {
+  /* font-size: 10px; */
 
-  @media (max-width: 59em) {
-    margin-bottom: 0.5rem;
-    font-size: var(--fs-200);
-  }
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
 
-  @media (max-width: 34em) {
-    margin-bottom: 0.8rem;
-    font-size: var(--fs-200);
-  }
-}
-
-p {
-  font-size: var(--fs-text);
-  font-style: normal;
-  line-height: 1.7;
-  font-weight: 500;
-  color: #121212;
+  /* Does NOT work on Safari */
+  /* scroll-behavior: smooth; */
 }
 
 body {
   // font-size: var(--fs-200);
   // font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.625;
+  line-height: 1;
   font-weight: 400;
   font-family: "Open Sans", sans-serif;
   // color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  // color: rgba(255, 255, 255, 0.87);
   // background-color: #343f61;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -141,8 +163,34 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-// @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght,YTLC@6..12,700,540&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  color: #333;
+  /* color: #45260a; */
+  /* color: #343a40; */
+  letter-spacing: -0.5px;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+  font-weight: 900;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
@@ -150,3 +198,29 @@ body {
 
 
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&display=swap');
+
+
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+  }
+
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+
+}
+
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+}

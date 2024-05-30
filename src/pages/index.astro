@@ -22,34 +22,161 @@ const videoType = 'text/html';
   <GlobalStyles />
   <main>
     <Hero />
-    <Services />
-
     <div class='section__title'>
       <h4 class='section__description'>LEAVE THE JUNK TO US!</h4>
       <h2 class='section__header'>
         Everything you need in a junk removal service
       </h2>
     </div>
-
-    <About />
+    <!-- <div class='block row justify-between'>
+      <div class='col-6'>
+        <h2>Dispose of junk the ECO-FRIENDLY way</h2>
+      </div>
+      <div class='col-4'>
+        <p>
+          Not every junk item is meant to be thrown away, and we understand
+          that.
+        </p>
+      </div>
+    </div> -->
+    <Services />
     <div class='section__title'>
       <h4 class='section__description'>TRASH REMOVAL MADE SIMPLE</h4>
       <h2 class='section__header'>Everything you need in a few steps</h2>
     </div>
     <Steps />
+
+    <About />
   </main>
 </Layout>
 
 <style lang='scss'>
+  @import '../styles/base/_color.scss';
   main {
     &:nth-child(even) {
       background-color: rgba(23, 34, 113, 0.94);
     }
   }
 
+  .block {
+    // background-color: #fff;
+    padding: 1rem 3rem;
+    min-height: 5vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-100, 0.8),
+        rgba($color-primary-100, 0.9)
+      ),
+      url('/image.jpeg');
+    align-text: center;
+
+    // opacity: 0.5;
+
+    h2 {
+      color: $color-secondary;
+      // margin-bottom: 0;
+    }
+
+    p {
+      color: azure;
+    }
+  }
+  .row {
+    --bs-gutter-x: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y, 0) * -1);
+    margin-right: calc(var(--bs-gutter-x) / -2);
+    margin-left: calc(var(--bs-gutter-x) / -2);
+  }
+
+  .justify-between {
+    // justify-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .row > * {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    padding-right: calc(var(--bs-gutter-x) / 2);
+    padding-left: calc(var(--bs-gutter-x) / 2);
+    margin: 8rem 0;
+  }
+
+  .mt-6 {
+    margin-top: 1.8rem;
+  }
+
+  .mb-2 {
+    margin-bottom: 0.8rem;
+  }
+
+  .mr-3 {
+    margin-right: 0.75rem;
+  }
+
+  .mt-4 {
+    margin-top: 1rem;
+  }
+
+  .gx-5 {
+    --bs-gutter-x: 3rem;
+  }
+
+  .order-1 {
+    order: 1;
+  }
+
+  .order-2 {
+    order: 2;
+  }
+
+  .col-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .col-4 {
+    flex: 0 0 auto;
+    width: 33.333333333333336%;
+  }
+
+  .col-5 {
+    flex: 0 0 auto;
+    width: 41.66666666666667%;
+  }
+
+  .col-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .col-7 {
+    flex: 0 0 auto;
+    width: 58.333333333333336%;
+  }
+
+  @media (max-width: 44em) {
+    .row > * {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 3rem;
+    }
+
+    .order-1 {
+      order: 2;
+    }
+
+    .order-2 {
+      order: 1;
+    }
+  }
+
   .section__title {
     width: 70%;
     margin: 8rem auto;
+    // font-size: 3.5rem;
 
     @media (max-width: 34em) {
       text-align: center;
@@ -59,10 +186,17 @@ const videoType = 'text/html';
 
   .section__description {
     color: aliceblue;
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    letter-spacing: 0.75px;
   }
 
   .section__header {
     color: var(--clr-secondary-100);
     padding: 0;
+    font-size: 3.8rem;
   }
 </style>
